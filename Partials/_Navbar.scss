@@ -1,0 +1,33 @@
+@use "variables";
+
+.nav {
+    background-color: variables.$ColorNavBackground;
+    max-height: fit-content;
+    width: 100%;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+    &__linkHolder {
+        text-align: center;
+        margin: 10px 20px;
+    }
+
+    &__link {
+        display: inline;
+        white-space: nowrap;
+        color: variables.$textColor;
+
+        &:hover {
+            color: greenyellow;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        margin: 0 10px;
+    }
+}

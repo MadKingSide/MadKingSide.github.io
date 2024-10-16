@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/favicon_signature.png" type="image/x-icon">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio de Jérémy Roy-Côté</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__linkHolder">
+            <a href="./index.html"><h1 class="nav__link">Accueil</h1></a>
+            <a href="./Projets/Projets.html"><h1 class="nav__link">Projets</h1></a>
+            <a href="#"><h1 class="nav__link">Curriculum Vitae</h1></a>
+        </div>
+    </nav>
+    <main>
+        <section class="news">
+            <h2 class="news__title">Derniers projets</h2>
+            <div class="swiper news__swiper">
+
+                <div class="swiper-wrapper news__swiper__wrapper">
+
+                  <div class="swiper-slide news__swiper__slide"><a href="./Projets/Tombeau.html"><img src="./Assets/3D/Tombeau/render_final_salle.jpg" alt="" srcset=""><div class="news__swiper__text">Tombeau Magique</div></a></div>
+                  <div class="swiper-slide news__swiper__slide"><a href="./Projets/Pluie_sous-marine.html"><video src="./Assets/3D/Pluie_tunnel/underwater_tunnel.mp4"></video><div class="news__swiper__text">Pluie Sous-marine</div></a></div>
+                  <div class="swiper-slide news__swiper__slide"><a href="./Projets/Intro_pixar.html"><video src="./Assets/3D/Intro_Pixar/roy-cote_jeremy_TP3_pixar_mp4_582414_MO.mp4"></video><div class="news__swiper__text">Intro Style Pixar</div></a></div>
+                </div>
+                <div class="swiper-pagination news__swiper__pagination"></div>
+              
+                <div class="swiper-button-prev news__swiper__arrow"></div>
+                <div class="swiper-button-next news__swiper__arrow"></div>
+            </div>
+        </section>
+        <section class="about">
+            <h2 class="news__title">À propos de moi</h2>
+            <div class="about__container">
+                <p class="about__text">i'm talking here</p>
+                <img src="./Assets/DSC08359.JPG" alt="photo de Jérémy Roy-Côté">
+            </div>
+        </section>
+        <section class="maestro">
+            <h2 class="maestro__text">Application maitrisé</h2>
+            <div class="maestro__apps">
+                <img src="./Assets/application_logo/logo_github.png">
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <a href="mailto:jeremy-roy-cote@hotmail.com">jeremy-roy-cote@hotmail.com</a>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+</html>

@@ -1,0 +1,23 @@
+@use "variables";
+
+.about {
+
+    &__container {
+        background-color: variables.$ColorNavBackground;
+        width: 80vw;
+        height: 300px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+            margin: 20px;
+            border-radius: 25px;
+        }
+    }
+
+    &__text {
+        margin: 20px;
+    }
+}

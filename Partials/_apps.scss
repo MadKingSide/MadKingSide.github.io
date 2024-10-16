@@ -1,0 +1,14 @@
+@use "variables";
+
+.maestro {
+
+    &__apps {
+        background-color: darkgray;
+        width: 80vw;
+
+        img {
+            width: 80px;
+            aspect-ratio: 1/1;
+        }
+    }
+}

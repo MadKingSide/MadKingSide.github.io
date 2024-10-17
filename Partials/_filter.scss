@@ -1,0 +1,29 @@
+@use "variables";
+
+.sorting {
+    width: 80vw;
+    text-align: center;
+
+
+    &__holder {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;   
+    }
+
+    &__genre {
+        min-width: 40px;
+        margin: 5px;
+        padding: 5px;
+        border: 2px white solid;
+        border-radius: 25px;
+        text-align: center;
+        transition: 0.2s;
+        user-select: none;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}

@@ -5,19 +5,22 @@
     &__container {
         background-color: variables.$ColorNavBackground;
         width: 80vw;
-        height: 300px;
+        height: fit-content;
         border-radius: 25px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: row-reverse;
+
 
         img {
             margin: 20px;
             border-radius: 25px;
+            height: 30vw;
         }
     }
 
     &__text {
+        width: 100%;
         margin: 20px;
+        text-align: center;
     }
 }

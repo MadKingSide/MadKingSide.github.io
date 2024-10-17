@@ -1,14 +1,29 @@
 @use "variables";
 
 .maestro {
+    text-align: center;
 
-    &__apps {
-        background-color: darkgray;
+    &__apps, &__lingo {
+        
         width: 80vw;
 
         img {
-            width: 80px;
-            aspect-ratio: 1/1;
+            background-color: darkgray;
+            height: 80px;
+            padding: 5px;
+            border: 5px variables.$ColorNavBackground inset;
+            transition-timing-function: linear;
+            transition-duration: 0.1s;
+
+            &:hover {
+                transform: scale(130%);
+            }
         }
+    }
+
+    hr {
+        margin: 10px 0;
+        border: 2px solid white;
+        border-radius: 25px;
     }
 }

@@ -1,0 +1,36 @@
+@use "variables";
+
+
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 5vw;
+
+
+
+
+    &__mailHolder {
+
+
+        a {
+            text-decoration: none;
+        }
+
+        hr {
+            border: 2px solid black;
+            width: 0px;
+            transition-duration: 1s;
+            margin: auto;
+        }
+
+        &:hover hr {
+            border: 2px solid white;
+            width: 100%;    
+        }
+
+    }
+}

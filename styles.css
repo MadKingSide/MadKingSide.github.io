@@ -68,27 +68,139 @@
 .about__container {
   background-color: rgb(48, 48, 48);
   width: 80vw;
-  height: 300px;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 25px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 .about__container img {
   margin: 20px;
   border-radius: 25px;
+  height: 30vw;
 }
 .about__text {
+  width: 100%;
   margin: 20px;
+  text-align: center;
 }
 
-.maestro__apps {
-  background-color: darkgray;
+.maestro {
+  text-align: center;
+}
+.maestro__apps, .maestro__lingo {
   width: 80vw;
 }
-.maestro__apps img {
-  width: 80px;
-  aspect-ratio: 1/1;
+.maestro__apps img, .maestro__lingo img {
+  background-color: darkgray;
+  height: 80px;
+  padding: 5px;
+  border: 5px rgb(48, 48, 48) inset;
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+}
+.maestro__apps img:hover, .maestro__lingo img:hover {
+  transform: scale(130%);
+}
+.maestro hr {
+  margin: 10px 0;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+.sorting {
+  width: 80vw;
+  text-align: center;
+}
+.sorting__holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.sorting__genre {
+  min-width: 40px;
+  margin: 5px;
+  padding: 5px;
+  border: 2px white solid;
+  border-radius: 25px;
+  text-align: center;
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.sorting__genre:hover {
+  background-color: white;
+  color: black;
+}
+
+.projects {
+  width: 80vw;
+  text-align: center;
+}
+.projects__all {
+  display: flex;
+  flex-direction: column;
+}
+.projects__element {
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  border: 2px white solid;
+  border-radius: 25px;
+  margin: 10px 0;
+}
+.projects__element:hover .projects__element__preview {
+  filter: blur(0px);
+}
+.projects__element__preview {
+  width: 100%;
+  filter: blur(4px);
+  transition-duration: 1s;
+}
+.projects__element__title {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.projects__element__tagHolder {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.671);
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 5vw;
+}
+.foot__mailHolder a {
+  text-decoration: none;
+}
+.foot__mailHolder hr {
+  border: 2px solid black;
+  width: 0px;
+  transition-duration: 1s;
+  margin: auto;
+}
+.foot__mailHolder:hover hr {
+  border: 2px solid white;
+  width: 100%;
 }
 
 * {
@@ -104,6 +216,7 @@ html {
 body {
   background-color: black;
   min-width: 200px;
+  height: 100vh;
 }
 
 main {

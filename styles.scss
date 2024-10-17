@@ -2,6 +2,8 @@
 @use "partials/hero";
 @use "partials/about";
 @use "partials/apps";
+@use "partials/filter";
+@use "partials/projects";
 @use "partials/footer";
 
 
@@ -19,6 +21,7 @@ html {
 body {
     background-color: black;
     min-width: 200px;
+    height: 100vh;
 }
 
 main {

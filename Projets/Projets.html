@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/favicon_signature.png" type="image/x-icon">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Portfolio de Jérémy Roy-Côté</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__linkHolder">
+            <a href="../index.html"><h1 class="nav__link">Accueil</h1></a>
+            <a href="./Projets/Projets.html"><h1 class="nav__link">Projets</h1></a>
+            <a href="#"><h1 class="nav__link">Curriculum Vitae</h1></a>
+        </div>
+    </nav>
+    <main>
+        <section class="sorting">
+            <h2>Filtre</h2>
+            <div class="sorting__holder">
+                <div class="sorting__genre filter" id="3D">3D</div>
+                <div class="sorting__genre filter" id="web">Web</div>
+                <div class="sorting__genre filter" id="video">Video</div>
+                <div class="sorting__genre filter" id="videoGame">Jeu video</div>
+                <div class="sorting__genre filter" id="school">Projet d'école</div>
+            </div>
+        </section>
+        <section class="projects">
+            <h2>Projets</h2>
+            <div class="projects__all">
+                <div class="projects__element school 3D">
+                    <a href="./Tombeau.html">
+                        <img src="../Assets/3D/Tombeau/render_final_salle.jpg" alt="" class="projects__element__preview">
+                        <h3 class="projects__element__title">Tombeau</h3>
+                        <div class="projects__element__tagHolder">
+                            <div class="sorting__genre">Projet d'école</div>
+                            <div class="sorting__genre">3D</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__element school 3D">
+                    <a href="./Intro_pixar.html">
+                        <img src="../Assets/3D/Intro_Pixar/intro_frame_1.png" alt="" class="projects__element__preview">
+                        <h3 class="projects__element__title">Intro style Pixar</h3>
+                        <div class="projects__element__tagHolder">
+                            <div class="sorting__genre">Projet d'école</div>
+                            <div class="sorting__genre">3D</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__element school web">
+                    <a href="./Vous-etes-le-hero-monster-hunter.html">
+                        <img src="../Assets/Web/vous_etes_le_heros/MH_preview.png" alt="" class="projects__element__preview">
+                        <h3 class="projects__element__title">Vous êtes le héro monster hunter</h3>
+                        <div class="projects__element__tagHolder">
+                            <div class="sorting__genre">Projet d'école</div>
+                            <div class="sorting__genre">Web</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="foot">
+        <div class="foot__mailHolder">
+            <a href="mailto:jeremy-roy-cote@hotmail.com">jeremy-roy-cote@hotmail.com</a>
+            <hr>           
+        </div>
+
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../script.js"></script>
+</html>

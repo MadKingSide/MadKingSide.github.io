@@ -1,7 +1,7 @@
 @use "variables";
 
 .projects {
-    width: 80vw;
+    width: 80%;
     text-align: center;
 
     &__all {
@@ -43,9 +43,11 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 15%;
+            height: fit-content;
             display: flex;
             flex-direction: row;
+            justify-content: center; //dunno if it looks good...
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.671);
         }
 

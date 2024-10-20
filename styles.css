@@ -89,6 +89,9 @@
 
 .maestro {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .maestro__apps, .maestro__lingo {
   width: 80%;
@@ -108,6 +111,7 @@
   margin: 10px 0;
   border: 2px solid white;
   border-radius: 25px;
+  width: 80%;
 }
 
 .sorting {
@@ -161,9 +165,13 @@
   border: 2px white solid;
   border-radius: 25px;
   margin: 10px 0;
+  transition: 1s;
 }
 .projects__element:hover .projects__element__preview {
   filter: blur(0px);
+}
+.projects__element:hover {
+  border: 2px greenyellow solid;
 }
 .projects__element__preview {
   width: 100%;
@@ -192,11 +200,22 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.671);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .unDisplay {
   display: none !important;
+}
+
+.mainContent {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainContent__iframeMH {
+  width: 100%;
+  height: 1000px;
 }
 
 .foot {
@@ -235,6 +254,7 @@ body {
   background-color: black;
   min-width: 200px;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 main {

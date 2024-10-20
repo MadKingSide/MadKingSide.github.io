@@ -1,0 +1,13 @@
+@use "variables";
+
+.mainContent {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__iframeMH {
+        width: 100%;
+        height: 1000px;
+    }
+}

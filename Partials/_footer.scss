@@ -18,14 +18,14 @@
         }
 
         hr {
-            border: 2px solid black;
+            border: 2px solid variables.$primaryColor;
             width: 0px;
             transition-duration: 1s;
             margin: auto;
         }
 
         &:hover hr {
-            border: 2px solid white;
+            border: 2px solid variables.$textColor;
             width: 100%;    
         }
 

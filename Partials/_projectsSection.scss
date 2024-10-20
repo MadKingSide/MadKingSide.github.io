@@ -14,14 +14,19 @@
         position: relative;
         height: fit-content;
         overflow: hidden;
-        border: 2px white solid;
+        border: 2px variables.$textColor solid;
         border-radius: 25px;
         margin: 10px 0;
+        transition: 1s;
 
         &:hover &__preview {
             filter: blur(0px);
         }
-
+            
+        &:hover {
+            border: 2px variables.$HoverColor solid;
+        }
+        
         &__preview {
             width: 100%;
             filter: blur(4px);
@@ -48,7 +53,7 @@
             flex-direction: row;
             justify-content: center; //dunno if it looks good...
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.671);
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
     }

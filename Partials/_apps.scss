@@ -2,16 +2,19 @@
 
 .maestro {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__apps, &__lingo {
         
         width: 80%;
 
         img {
-            background-color: darkgray;
+            background-color: darkgray; // exception because it looks better with a lighter color
             height: 80px;
             padding: 5px;
-            border: 5px variables.$ColorNavBackground inset;
+            border: 5px variables.$secondaryColor inset;
             transition-timing-function: linear;
             transition-duration: 0.1s;
 
@@ -23,7 +26,8 @@
 
     hr {
         margin: 10px 0;
-        border: 2px solid white;
+        border: 2px solid variables.$textColor;
         border-radius: 25px;
+        width: 80%;
     }
 }

@@ -132,8 +132,15 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  order: 2;
 }
 .sorting__genre:hover {
+  background-color: white;
+  color: black;
+}
+
+.toggled {
+  order: 1;
   background-color: white;
   color: black;
 }
@@ -186,6 +193,10 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.671);
+}
+
+.unDisplay {
+  display: none !important;
 }
 
 .foot {

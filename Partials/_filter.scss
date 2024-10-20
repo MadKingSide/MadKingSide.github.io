@@ -21,10 +21,19 @@
         text-align: center;
         transition: 0.2s;
         user-select: none;
+        order: 2;
 
         &:hover {
             background-color: white;
             color: black;
         }
+
+        
     }
+}
+
+.toggled {
+            order: 1;
+            background-color: white;
+            color: black;
 }

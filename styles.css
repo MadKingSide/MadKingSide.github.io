@@ -216,6 +216,22 @@
 .mainContent__iframeMH {
   width: 100%;
   height: 1000px;
+  border: solid 2px white;
+  border-radius: 25px;
+}
+.mainContent__text {
+  margin: 20px 10px;
+}
+.mainContent__video {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+.mainContent__image {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin: 20px 0;
 }
 
 .foot {
@@ -225,6 +241,7 @@
   align-items: center;
   margin-top: 20px;
   height: 5vw;
+  padding-bottom: 20px;
 }
 .foot__mailHolder a {
   text-decoration: none;

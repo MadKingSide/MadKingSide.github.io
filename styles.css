@@ -79,18 +79,34 @@
 .about__container img {
   margin: 20px;
   border-radius: 25px;
-  height: 30vw;
+  height: 500px;
   min-height: 300px;
+  filter: grayscale(40%);
 }
 .about__text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 100%;
+  width: 90%;
   margin: 20px;
   text-align: center;
 }
 
+@media screen and (max-width: 700px) {
+  .about__container {
+    flex-direction: column;
+  }
+  .about__container img {
+    height: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+  }
+  .about__text {
+    align-self: center;
+  }
+}
 .maestro {
   text-align: center;
   display: flex;

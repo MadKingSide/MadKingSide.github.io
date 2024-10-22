@@ -10,12 +10,12 @@
         display: flex;
         flex-direction: row-reverse;
 
-
         img {
             margin: 20px;
             border-radius: 25px;
-            height: 30vw;
+            height: 500px;
             min-height: 300px;
+            filter: grayscale(40%);
         }
     }
 
@@ -23,8 +23,26 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 100%;
+        width: 90%;
         margin: 20px;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about{
+        &__container {
+            flex-direction: column;
+            
+            img {
+                height: 100px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        &__text {
+            align-self: center;
+        }
     }
 }

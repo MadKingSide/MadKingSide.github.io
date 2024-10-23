@@ -106,19 +106,21 @@
   .about__text {
     align-self: center;
   }
+  .about__text p {
+    margin-bottom: 20px;
+  }
 }
 .maestro {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.maestro__apps, .maestro__lingo {
   width: 80%;
 }
 .maestro__apps img, .maestro__lingo img {
   background-color: darkgray;
-  height: 80px;
+  height: 20vw;
+  max-height: 100px;
   padding: 5px;
   border: 5px rgb(48, 48, 48) inset;
   transition-timing-function: linear;

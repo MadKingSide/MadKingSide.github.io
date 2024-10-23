@@ -24,6 +24,11 @@ body {
     min-width: 200px;
     height: 100vh;
     overflow-x: hidden;
+    cursor: url("./Assets/cursor/default.png"), auto;
+}
+
+a{
+    cursor: url("./Assets/cursor/pointer.png"), auto;
 }
 
 main {
@@ -38,6 +43,15 @@ section {
     margin: 20px 0;
 }
 
+h1 {
+    font-size:calc(20px + 1vw);
+}
+
 h2 {
     margin-bottom: 10px;
+    font-size:calc(12px + 1vw);
+}
+
+p {
+    font-size:calc(10px + 1vw);
 }

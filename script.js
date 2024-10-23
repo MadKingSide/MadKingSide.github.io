@@ -17,15 +17,15 @@ const swiper = new Swiper('.news__swiper', {
       prevEl: '.swiper-button-prev',
     },
   
-  });
+});
+
+// section filter
 
 let filterArr = document.querySelectorAll(".filter");
 console.log(filterArr)
 
 let projetsArr = document.querySelectorAll(".projects__element");
 console.log(projetsArr)
-
-
 
 for (let i = 0; i < filterArr.length; i++) {
   filterArr[i].addEventListener("click", function() {
@@ -68,18 +68,23 @@ for (let i = 0; i < filterArr.length; i++) {
   })
 }
 
-let keyboard = new Audio("./Assets/Keyboard_sounds_effect/1.wav");
 
+// section keyboard sounds
 
-
+let keyboard = new Audio();
 let hoverarr = document.querySelectorAll(".maestro img");
-console.log(hoverarr);
+//console.log(hoverarr); to check what is in the array
 
 for (let index = 0; index < hoverarr.length; index++) {
   hoverarr[index].addEventListener("mouseover", function() {
     let randomSounds = Math.floor((Math.random() * 14) + 1);
-    console.log(randomSounds);
-    keyboard.src = `./Assets/Keyboard_sounds_effect/${randomSounds}.wav`;
+    //console.log(randomSounds); which sound will play
+    //console.log(window.location.href); what is the current url
+    if (window.location.href.includes(index.html)) {
+      keyboard.src = `./Assets/Keyboard_sounds_effect/${randomSounds}.wav`;
+    } else {
+      keyboard.src = `../Assets/Keyboard_sounds_effect/${randomSounds}.wav`;
+    }
     keyboard.play();
   })
 }

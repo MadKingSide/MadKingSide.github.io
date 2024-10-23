@@ -67,3 +67,19 @@ for (let i = 0; i < filterArr.length; i++) {
     
   })
 }
+
+let keyboard = new Audio("./Assets/Keyboard_sounds_effect/1.wav");
+
+
+
+let hoverarr = document.querySelectorAll(".maestro img");
+console.log(hoverarr);
+
+for (let index = 0; index < hoverarr.length; index++) {
+  hoverarr[index].addEventListener("mouseover", function() {
+    let randomSounds = Math.floor((Math.random() * 14) + 1);
+    console.log(randomSounds);
+    keyboard.src = `./Assets/Keyboard_sounds_effect/${randomSounds}.wav`;
+    keyboard.play();
+  })
+}

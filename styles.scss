@@ -29,6 +29,10 @@ body {
 
 a{
     cursor: url("./Assets/cursor/pointer.png"), auto;
+
+    &:hover {
+        color: greenyellow;
+    }
 }
 
 main {

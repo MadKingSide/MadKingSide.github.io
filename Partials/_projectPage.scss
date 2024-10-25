@@ -6,11 +6,12 @@
     flex-direction: column;
     align-items: center;
 
-    &__iframeMH { //for MH iframe especially
+    &__frame { //for MH iframe especially
         width: 100%;
-        height: 1000px;
+        height: 1100px;
         border: solid 2px variables.$textColor;
         border-radius: 25px;
+        overflow: hidden;
     }
 
     &__text {
@@ -23,10 +24,14 @@
         border-radius: 25px;
     }
 
-    &__image {
+    &__image, &__mainImage {
         width: 100%;
         border: 2px solid variables.$textColor;
         border-radius: 25px;
         margin: 20px 0;
+    }
+
+    &__mainMedia {
+        width: 100%;
     }
 }

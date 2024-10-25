@@ -35,6 +35,10 @@ a{
     }
 }
 
+.project {
+    cursor: url("./Assets/cursor/pointer.png"), auto;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -58,4 +62,8 @@ h2 {
 
 p {
     font-size:calc(10px + 1vw);
+}
+
+.hidden {
+    display: none;
 }

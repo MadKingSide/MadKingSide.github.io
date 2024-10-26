@@ -14,7 +14,11 @@
             height: 20vw;
             max-height: 100px;
             padding: 5px;
-            border: 5px variables.$secondaryColor inset;
+            margin-right: 5px;
+            border-top: 5px darkgray inset;
+            border-bottom: 5px variables.$secondaryColor inset;
+            border-right: 5px variables.$secondaryColor inset;
+            border-left: 5px darkgray inset;
             transition-timing-function: linear;
             transition-duration: 0.1s;
 
@@ -24,7 +28,7 @@
         }
     }
 
-    hr {
+    &__separator {
         margin: 10px 0;
         border: 2px solid variables.$textColor;
         border-radius: 25px;

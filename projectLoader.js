@@ -14,44 +14,47 @@ const projectObj = {
     image9: "../Assets/3D/Tombeau/render_final_pillier.jpg",
     image10: "../Assets/3D/Tombeau/render_final_coffre.jpg",
     image10: "../Assets/3D/Tombeau/render_final_sarcophage.jpg",
+    text1: "i be writing things...",
     video: false,
     iframe: false,
+    apps: ['maya','unity'],
+    lingo: false,
   },
   pluieTunnel: {
     titre: `pluie Tunnel - 3D, Sonore`,
     description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
     mainImage: false,
-    image1: false,
-    image2: false,
     video: "../Assets/3D/Pluie_tunnel/underwater_tunnel.mp4",
     iframe: false,
+    apps: ['maya','REAPER','DaVinci'],
+    lingo: false,
   },
   pixar: {
     titre: `Intro style Pixar - 3D, Sonore`,
     description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
     mainImage: false,
-    image1: false,
-    image2: false,
     video:"../Assets/3D/Intro_Pixar/roy-cote_jeremy_TP3_pixar_mp4_582414_MO.mp4",
     iframe: false,
+    apps: ['maya','REAPER','DaVinci'],
+    lingo: false,
   },
   MonsterHunter: {
     titre: `Vous êtes le héros : Monster Hunter - 3D, Sonore`,
     description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
     mainImage: false,
-    image1: false,
-    image2: false,
     video: false,
     iframe: "https://sideking.github.io/",
+    apps: ['github','vscode'],
+    lingo: ['HTML5','css','javascript'],
   },
   odysseus: {
     titre: `odysseus - 3D, Sonore`,
     description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
     mainImage: false,
-    image1: false,
-    image2: false,
     video: "../Assets/3D/Odysseus/Odysseus.mp4",
     iframe: false,
+    apps: ['maya','REAPER','DaVinci'],
+    lingo: false,
   },
 };
 
@@ -74,41 +77,87 @@ function loadProject(projectName) {
   let projectVideo = document.querySelector(".mainContent__video");
   let projectsideContent = document.querySelector(".mainContent__sideMedia");
 
-  // DOM elements
-  const para = document.createElement("p");
-  const node = document.createTextNode("");
- 
+  // For the apps section
+  let appsContainer = document.querySelector(".maestro__apps");
+  let lingoContainer = document.querySelector(".maestro__lingo");
+  let maestroHR = document.querySelector(".maestro__separator");
+  let appsUsed = document.querySelector(".appsUsed");
+  let lingosUsed = document.querySelector(".lingoUsed");
+  
 
   /* Give project info */
   projectTitle.textContent = selectedProject.titre;
   projectDesc.textContent = selectedProject.description;
 
-  if (selectedProject.mainImage !== false) {
+  if (selectedProject.mainImage !== false) { // if if main image
     projectImg.src = selectedProject.mainImage;
     projectImg.classList.remove("hidden");
   } else {
     projectImg.classList.add("hidden");
   }
-  if (selectedProject.video !== false) {
+
+  if (selectedProject.video !== false) { // if video
     projectVideo.src = selectedProject.video;
     projectVideo.classList.remove("hidden");
   } else {
     projectVideo.classList.add("hidden");
   }
-  if (selectedProject.iframe !== false) {
+
+  if (selectedProject.iframe !== false) { // if iframe
     projectFrame.src = selectedProject.iframe;
     projectFrame.classList.remove("hidden");
   } else {
     projectFrame.classList.add("hidden");
   }
+
+  if (selectedProject.apps !== false) { // if apps
+    appsContainer.classList.remove("hidden");
+    appsUsed.classList.remove("hidden");
+    for (let index = 0; index < selectedProject.apps.length; index++) {
+      let img = document.createElement("img");
+      img.src = `../Assets/application_logo/${selectedProject.apps[index]}.png`;
+      appsContainer.appendChild(img);
+    }
+  } else {
+    appsContainer.classList.add("hidden");
+    appsUsed.classList.add("hidden");
+  }
+
+  if (selectedProject.lingo !== false) { // if language
+    lingoContainer.classList.remove("hidden");
+    lingosUsed.classList.remove("hidden");
+    maestroHR.classList.remove("hidden");
+    for (let index = 0; index < selectedProject.lingo.length; index++) {
+      let img = document.createElement("img");
+      img.src = `../Assets/application_logo/${selectedProject.lingo[index]}.png`;
+      lingoContainer.appendChild(img);
+    }
+  } else {
+    lingoContainer.classList.add("hidden");
+    lingosUsed.classList.add("hidden");
+    maestroHR.classList.add("hidden");
+  }
+
   // loop for additional images
   for (let index = 1; index < 20; index++) {
-    const img = document.createElement("img");
-    if (selectedProject[`image${index}`]) {
-        img.src = selectedProject[`image${index}`];
-        img.classList.add("mainContent__image")
-        projectsideContent.appendChild(img)
+
+     // DOM elements
+     let img = document.createElement("img");
+     let para = document.createElement("p");
+
+
+    if (selectedProject[`text${index}`]) {
+      let text = document.createTextNode(selectedProject[`text${index}`]);
+      para.appendChild(text);
+      para.classList.add("mainContent__text");
+      projectsideContent.appendChild(para);
     }
+
+    if (selectedProject[`image${index}`]) {
+      img.src = selectedProject[`image${index}`];
+      img.classList.add("mainContent__image");
+      projectsideContent.appendChild(img);
+  }
   }
 }
 

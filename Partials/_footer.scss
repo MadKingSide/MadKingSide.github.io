@@ -5,14 +5,14 @@
 .foot {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 20px;
     height: 5vw;
     padding-bottom: 20px;
+    min-height: 100px;
 
-    &__mailHolder {
-
+    &__mailHolder, &__github{
 
         a {
             text-decoration: none;

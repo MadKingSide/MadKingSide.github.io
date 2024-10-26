@@ -122,14 +122,18 @@
   height: 20vw;
   max-height: 100px;
   padding: 5px;
-  border: 5px rgb(48, 48, 48) inset;
+  margin-right: 5px;
+  border-top: 5px darkgray inset;
+  border-bottom: 5px rgb(48, 48, 48) inset;
+  border-right: 5px rgb(48, 48, 48) inset;
+  border-left: 5px darkgray inset;
   transition-timing-function: linear;
   transition-duration: 0.1s;
 }
 .maestro__apps img:hover, .maestro__lingo img:hover {
   transform: scale(130%);
 }
-.maestro hr {
+.maestro__separator {
   margin: 10px 0;
   border: 2px solid white;
   border-radius: 25px;
@@ -263,22 +267,23 @@
 .foot {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 20px;
   height: 5vw;
   padding-bottom: 20px;
+  min-height: 100px;
 }
-.foot__mailHolder a {
+.foot__mailHolder a, .foot__github a {
   text-decoration: none;
 }
-.foot__mailHolder hr {
+.foot__mailHolder hr, .foot__github hr {
   border: 2px solid black;
   width: 0px;
   transition-duration: 1s;
   margin: auto;
 }
-.foot__mailHolder:hover hr {
+.foot__mailHolder:hover hr, .foot__github:hover hr {
   border: 2px solid white;
   width: 100%;
 }

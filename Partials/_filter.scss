@@ -8,20 +8,21 @@
     &__holder {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;   
+        justify-content: flex-start;
     }
 
     &__genre {
-        min-width: 40px;
+        width: fit-content;
         height: fit-content;
         margin: 5px;
-        padding: 5px;
+        padding: 5px 10px;
         border: 2px variables.$textColor solid;
         border-radius: 25px;
         text-align: center;
         transition: 0.2s;
         user-select: none;
         order: 2;
+        white-space: nowrap;
 
         &:hover {
             background-color: variables.$textColor;

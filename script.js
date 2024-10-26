@@ -16,8 +16,15 @@ const swiper = new Swiper('.news__swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+});
+
+const mySwiperTwo = new Swiper (".swiper-filters", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  focusableElements: false,
   
 });
+
 
 // section filter
 
@@ -29,11 +36,9 @@ console.log(projetsArr)
 
 for (let i = 0; i < filterArr.length; i++) {
   filterArr[i].addEventListener("click", function() {
-    //console.log(`${filterArr[i].id}`); // to check which class is clicked
+    console.log(`${filterArr[i].id}`); // to check which class is clicked
     filterArr[i].classList.toggle("toggled");
     for (let j = 0; j < projetsArr.length; j++) {
-      
-      projetsArr[j].style.display = "block";
 
       if (filterArr[i].id == "all") {
         filterArr.forEach(element => {
@@ -54,10 +59,10 @@ for (let i = 0; i < filterArr.length; i++) {
     for (let h = 0; h < filterArr.length; h++) {
       
       if (filterArr[h].classList.contains("toggled")) {
-        console.log("has");
+        //console.log("has");
         nbChecked ++;
       } else if (!filterArr[h].classList.contains("toggled")) {
-        console.log("none");
+        //console.log("none");
       }
       console.log(nbChecked) //number of filter checked
     }

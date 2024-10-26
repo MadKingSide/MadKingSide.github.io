@@ -14,7 +14,12 @@ const projectObj = {
     image9: "../Assets/3D/Tombeau/render_final_pillier.jpg",
     image10: "../Assets/3D/Tombeau/render_final_coffre.jpg",
     image10: "../Assets/3D/Tombeau/render_final_sarcophage.jpg",
-    text1: "i be writing things...",
+    subTitle1: "Moodboard - Porte",
+    subTitle3: "Moodboard - Sarcophage",
+    subTitle5: "Moodboard - Épée",
+    subTitle7: "Capture d'écran - unity",
+    subTitle8: "Rendu finaux",
+    //text1: "Moodboard - Porte",
     video: false,
     iframe: false,
     apps: ['maya','unity'],
@@ -75,7 +80,7 @@ function loadProject(projectName) {
   let projectImg = document.querySelector(".mainContent__mainImage");
   let projectFrame = document.querySelector(".mainContent__frame");
   let projectVideo = document.querySelector(".mainContent__video");
-  let projectsideContent = document.querySelector(".mainContent__sideMedia");
+  let projectsideContent = document.querySelector(".mainContent");
 
   // For the apps section
   let appsContainer = document.querySelector(".maestro__apps");
@@ -138,13 +143,19 @@ function loadProject(projectName) {
     maestroHR.classList.add("hidden");
   }
 
-  // loop for additional images
+  // loop for additional images, texts and titles
   for (let index = 1; index < 20; index++) {
 
      // DOM elements
      let img = document.createElement("img");
      let para = document.createElement("p");
+     let subtitle = document.createElement("h3");
 
+     if (selectedProject[`subTitle${index}`]) {
+      let titleText = document.createTextNode(selectedProject[`subTitle${index}`]);
+      subtitle.appendChild(titleText);
+      projectsideContent.appendChild(subtitle);
+    }
 
     if (selectedProject[`text${index}`]) {
       let text = document.createTextNode(selectedProject[`text${index}`]);

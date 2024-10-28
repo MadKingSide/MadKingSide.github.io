@@ -2,7 +2,7 @@
 const projectObj = {
   tombeau: {
     titre: `Tombeau - 3D`,
-    description: `Une scène 3D qui vise à reproduire un style réalistique sur un lieu du passé. Réalisé dans le cadre du cours "Modélisation 3D" par Alexandre Gervais, Ian Corbin, Samuel Desmeules-Voyer et Keven Malric, chaque membre de l'équipe on produit au moins 3 éléments 3D uniques à la scène. De plus, j'ai assemblé la scène et Ian Corbin s'est occupé de l'éclairage.  <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Maya et Unity</a>.`,
+    description: `Une scène 3D Créant une vieille tombe souterraine avec un aspect fantastique. Ce projet a été réalisé dans le cadre du cours "Modélisation 3D" par Jérémy roy-Côté, Jacob Jetté-Longpré et Gabriel Bourdage. Jacob à créé les cristaux, le pillier magique et le calice, Gabriel a créé les coffres les lanternes et le chandelier et j'ai créé le sarcophage l'épée et la porte. J'ai aussi assemblé la scène avec Jacob et fait l'éclairage. <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Maya et Unity</a>.`,
     mainImage: "../Assets/3D/Tombeau/render_final_salle.jpg",
     image1: "../Assets/3D/Tombeau/moodboard_door.png",
     image2: "../Assets/3D/Tombeau/render_door_front.jpg",
@@ -14,13 +14,14 @@ const projectObj = {
     image8: "../Assets/3D/Tombeau/render_final_porte.jpg",
     image9: "../Assets/3D/Tombeau/render_final_pillier.jpg",
     image10: "../Assets/3D/Tombeau/render_final_coffre.jpg",
-    image10: "../Assets/3D/Tombeau/render_final_sarcophage.jpg",
+    image11: "../Assets/3D/Tombeau/render_final_sarcophage.jpg",
     subTitle1: "Moodboard - Porte",
     subTitle3: "Moodboard - Sarcophage",
     subTitle5: "Moodboard - Épée",
     subTitle7: "Capture d'écran - unity",
+    text7: "Une recréation de la salle sans texture dans unity était demandé dans ce projet.",
     subTitle8: "Rendu finaux",
-    /*text1: "Moodboard - Porte", */
+    text19: "Les moodboards et les rendus des autres modèles sont dans le Github de ce porfolio.",
     video: false,
     iframe: false,
     apps: ['maya','unity'],
@@ -28,7 +29,7 @@ const projectObj = {
   },
   pluieTunnel: {
     titre: `pluie Tunnel - 3D, Sonore`,
-    description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
+    description: `Une scène 3D Créant une vieille tombe souterraine avec un aspect fantastique. Ce projet a été réalisé dans le cadre du cours "Modélisation 3D" par Jérémy roy-Côté, Jacob Jetté-Longpré et Gabriel Bourdage. Jacob à créé les cristaux, le pillier magique et le calice, Gabriel a créé les coffres les lanternes et le chandelier et j'ai créé le sarcophage l'épée et la porte. J'ai aussi assemblé la scène avec Jacob et fait l'éclairage. <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Mayam Reaper et Davinci</a>.`,
     mainImage: false,
     video: "../Assets/3D/Pluie_tunnel/underwater_tunnel.mp4",
     iframe: false,

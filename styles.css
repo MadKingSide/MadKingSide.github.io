@@ -106,6 +106,7 @@
 @media screen and (max-width: 700px) {
   .about__container {
     flex-direction: column;
+    justify-content: center;
   }
   .about__container img {
     height: 100px;
@@ -116,6 +117,7 @@
   }
   .about__text {
     align-self: center;
+    margin-left: 0;
   }
   .about__text p {
     margin-bottom: 20px;
@@ -130,7 +132,7 @@
 }
 .maestro__apps img, .maestro__lingo img {
   background-color: darkgray;
-  height: 20vw;
+  height: 15vw;
   max-height: 100px;
   padding: 5px;
   margin-right: 5px;

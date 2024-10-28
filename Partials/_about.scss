@@ -33,6 +33,7 @@
     .about{
         &__container {
             flex-direction: column;
+            justify-content: center;
             
             img {
                 height: 100px;
@@ -43,6 +44,7 @@
 
         &__text {
             align-self: center;
+            margin-left: 0;
 
             p {
                 margin-bottom: 20px;

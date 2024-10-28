@@ -46,7 +46,7 @@ const projectObj = {
     lingo: false,
   },
   MonsterHunter: {
-    titre: `Vous êtes le héros : Monster Hunter - 3D, Sonore`,
+    titre: `Vous êtes le héros : Monster Hunter - WEB, Sonore`,
     description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
     mainImage: false,
     video: false,

@@ -19,7 +19,7 @@
 }
 .nav__linkHolder {
   text-align: center;
-  margin: 10px 20px;
+  margin: 20px 20px;
 }
 .nav__link {
   display: inline;
@@ -32,6 +32,12 @@
 .nav a {
   text-decoration: none;
   margin: 0 10px;
+}
+
+.myNameIs {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .news {
@@ -94,13 +100,15 @@
   min-height: 300px;
   filter: grayscale(40%);
 }
+.about__name {
+  text-align: center;
+}
 .about__text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 90%;
   margin-left: 20px;
-  text-align: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -130,7 +138,7 @@
   align-items: center;
   width: 80%;
 }
-.maestro__apps img, .maestro__lingo img {
+.maestro__apps img, .maestro__apps div, .maestro__lingo img, .maestro__lingo div {
   background-color: darkgray;
   height: 15vw;
   max-height: 100px;
@@ -143,7 +151,7 @@
   transition-timing-function: linear;
   transition-duration: 0.1s;
 }
-.maestro__apps img:hover, .maestro__lingo img:hover {
+.maestro__apps img:hover, .maestro__apps div:hover, .maestro__lingo img:hover, .maestro__lingo div:hover {
   transform: scale(130%);
 }
 .maestro__separator {

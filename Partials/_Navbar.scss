@@ -13,7 +13,7 @@
 
     &__linkHolder {
         text-align: center;
-        margin: 10px 20px;
+        margin: 20px 20px;
     }
 
     &__link {
@@ -30,4 +30,10 @@
         text-decoration: none;
         margin: 0 10px;
     }
+}
+
+.myNameIs {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
 }

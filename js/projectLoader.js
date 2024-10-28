@@ -68,12 +68,13 @@ const projectObj = {
 /* F O N C T I O N  P R O J E C T  L O A D E R */
 
 let htmlPage = window.location.href;
+window.alert(htmlPage);
 
 function loadProject(projectName) {
   localStorage.setItem("projectSelected", projectName);
   if (htmlPage.includes("Projets.html") === true) {
     window.location.href = "./pagesTemplate.html";
-  } else if (htmlPage.includes("index.html") === true || htmlPage.includes == "madkingside.github.io") {
+  } else if (htmlPage.includes("index.html") === true || htmlPage.includes == "https://madkingside.github.io/") {
     window.location.href = "./Projets/pagesTemplate.html";
   }
 

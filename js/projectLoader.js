@@ -73,7 +73,7 @@ function loadProject(projectName) {
   localStorage.setItem("projectSelected", projectName);
   if (htmlPage.includes("Projets.html") === true) {
     window.location.href = "./pagesTemplate.html";
-  } else if (htmlPage.includes("index.html") === true || htmlPage.includes("madkingside.github.io") === true) {
+  } else if (htmlPage.includes("index.html") === true || htmlPage.includes == "madkingside.github.io") {
     window.location.href = "./Projets/pagesTemplate.html";
   }
 

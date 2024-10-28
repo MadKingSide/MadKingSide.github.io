@@ -9,7 +9,7 @@
     <title>Portfolio de Jérémy Roy-Côté</title>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav" id="SurfaceLevel">
         <div class="nav__linkHolder">
             <a href="./index.html"><h1 class="nav__link">Accueil</h1></a>
             <a href="./Projets/Projets.html"><h1 class="nav__link">Projets</h1></a>
@@ -21,11 +21,11 @@
             <h2 class="news__title">Derniers projets</h2>
             <div class="swiper news__swiper">
                 <div class="swiper-wrapper news__swiper__wrapper">
-                  <div class="swiper-slide news__swiper__slide project tombeau"><img src="./Assets/3D/Tombeau/render_final_salle.jpg"><div class="news__swiper__text"><p>Tombeau Magique</p></div></div>
+                  <div class="swiper-slide news__swiper__slide project tombeau"><img src="./Assets/3D/Tombeau/render_final_salle.jpg"><div class="news__swiper__text"><p class="news__text">Tombeau Magique</p></div></div>
 
-                  <div class="swiper-slide news__swiper__slide project pluieTunnel"><video src="./Assets/3D/Pluie_tunnel/underwater_tunnel.mp4"></video><div class="news__swiper__text"><p>Pluie Sous-marine</p></div></div>
+                  <div class="swiper-slide news__swiper__slide project pluieTunnel"><video src="./Assets/3D/Pluie_tunnel/underwater_tunnel.mp4"></video><div class="news__swiper__text"><p class="news__text">Pluie Sous-marine</p></div></div>
 
-                  <div class="swiper-slide news__swiper__slide project pixar"><video src="./Assets/3D/Intro_Pixar/roy-cote_jeremy_TP3_pixar_mp4_582414_MO.mp4"></video><div class="news__swiper__text"><p>Intro Style Pixar</p></div></div>
+                  <div class="swiper-slide news__swiper__slide project pixar"><video src="./Assets/3D/Intro_Pixar/roy-cote_jeremy_TP3_pixar_mp4_582414_MO.mp4"></video><div class="news__swiper__text"><p class="news__text">Intro Style Pixar</p></div></div>
                 </div>
                 <div class="swiper-pagination news__swiper__pagination"></div>
               
@@ -70,19 +70,24 @@
                 <img src="./Assets/application_logo/c++.png">
             </div>
         </section>
+    
+        <!-- link to the surface -->
+         <a class="OceanFloor" href="#SurfaceLevel"><img src="./Assets/upWeGo.png" alt=""></a>
+
     </main>
     <footer class="foot">
         <div class="foot__mailHolder">
             <a href="mailto:jeremy-roy-cote@hotmail.com">jeremy-roy-cote@hotmail.com</a>
-            <hr>           
+            <hr>     
         </div>
         <div class="foot__github">
             <a href="https://github.com/MadKingSide/MadKingSide.github.io">Github de mon portfolio</a>
             <hr>  
         </div>
+        <p>Laval, QC</p>  
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./script.js"></script>
-<script src="./projectLoader.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/projectLoader.js"></script>
 </html>

@@ -1,7 +1,8 @@
+/* O B J E T S  I N F O */
 const projectObj = {
   tombeau: {
     titre: `Tombeau - 3D`,
-    description: `Une scène 3D qui vise à reproduire un style réalistique sur un lieu du passé. Réalisé dans le cadre du cours "Modélisation 3D" par Alexandre Gervais, Ian Corbin, Samuel Desmeules-Voyer et Keven Malric, chaque membre de l'équipe on produit au moins 3 éléments 3D uniques à la scène. De plus, j'ai assemblé la scène et Ian Corbin s'est occupé de l'éclairage. Ce projet à été réalisé avec AutoDesk Maya et Arnold.`,
+    description: `Une scène 3D qui vise à reproduire un style réalistique sur un lieu du passé. Réalisé dans le cadre du cours "Modélisation 3D" par Alexandre Gervais, Ian Corbin, Samuel Desmeules-Voyer et Keven Malric, chaque membre de l'équipe on produit au moins 3 éléments 3D uniques à la scène. De plus, j'ai assemblé la scène et Ian Corbin s'est occupé de l'éclairage.  <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Maya et Unity</a>.`,
     mainImage: "../Assets/3D/Tombeau/render_final_salle.jpg",
     image1: "../Assets/3D/Tombeau/moodboard_door.png",
     image2: "../Assets/3D/Tombeau/render_door_front.jpg",
@@ -19,7 +20,7 @@ const projectObj = {
     subTitle5: "Moodboard - Épée",
     subTitle7: "Capture d'écran - unity",
     subTitle8: "Rendu finaux",
-    //text1: "Moodboard - Porte",
+    /*text1: "Moodboard - Porte", */
     video: false,
     iframe: false,
     apps: ['maya','unity'],
@@ -63,6 +64,8 @@ const projectObj = {
   },
 };
 
+/* F O N C T I O N  P R O J E C T  L O A D E R */
+
 let htmlPage = window.location.href;
 
 function loadProject(projectName) {
@@ -73,7 +76,7 @@ function loadProject(projectName) {
     window.location.href = "./Projets/pagesTemplate.html";
   }
 
-  /*HTML Elements*/
+  /* HTML Elements */
   let selectedProject = projectName;
   let projectTitle = document.querySelector(".mainContent__Title");
   let projectDesc = document.querySelector(".mainContent__text");
@@ -82,7 +85,7 @@ function loadProject(projectName) {
   let projectVideo = document.querySelector(".mainContent__video");
   let projectsideContent = document.querySelector(".mainContent");
 
-  // For the apps section
+  /* For the apps section */
   let appsContainer = document.querySelector(".maestro__apps");
   let lingoContainer = document.querySelector(".maestro__lingo");
   let maestroHR = document.querySelector(".maestro__separator");
@@ -92,30 +95,30 @@ function loadProject(projectName) {
 
   /* Give project info */
   projectTitle.textContent = selectedProject.titre;
-  projectDesc.textContent = selectedProject.description;
+  projectDesc.innerHTML = selectedProject.description;
 
-  if (selectedProject.mainImage !== false) { // if if main image
+  if (selectedProject.mainImage !== false) { /* if if main image */
     projectImg.src = selectedProject.mainImage;
     projectImg.classList.remove("hidden");
   } else {
     projectImg.classList.add("hidden");
   }
 
-  if (selectedProject.video !== false) { // if video
+  if (selectedProject.video !== false) { /* if video */
     projectVideo.src = selectedProject.video;
     projectVideo.classList.remove("hidden");
   } else {
     projectVideo.classList.add("hidden");
   }
 
-  if (selectedProject.iframe !== false) { // if iframe
+  if (selectedProject.iframe !== false) { /* if iframe */
     projectFrame.src = selectedProject.iframe;
     projectFrame.classList.remove("hidden");
   } else {
     projectFrame.classList.add("hidden");
   }
 
-  if (selectedProject.apps !== false) { // if apps
+  if (selectedProject.apps !== false) { /* if apps */
     appsContainer.classList.remove("hidden");
     appsUsed.classList.remove("hidden");
     for (let index = 0; index < selectedProject.apps.length; index++) {
@@ -128,7 +131,7 @@ function loadProject(projectName) {
     appsUsed.classList.add("hidden");
   }
 
-  if (selectedProject.lingo !== false) { // if language
+  if (selectedProject.lingo !== false) { /* if language */
     lingoContainer.classList.remove("hidden");
     lingosUsed.classList.remove("hidden");
     maestroHR.classList.remove("hidden");
@@ -143,10 +146,10 @@ function loadProject(projectName) {
     maestroHR.classList.add("hidden");
   }
 
-  // loop for additional images, texts and titles
+  /* loop for additional images, texts and titles */
   for (let index = 1; index < 20; index++) {
 
-     // DOM elements
+     /* DOM elements */
      let img = document.createElement("img");
      let para = document.createElement("p");
      let subtitle = document.createElement("h3");

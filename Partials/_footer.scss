@@ -5,10 +5,11 @@
 .foot {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     height: 5vw;
-    min-height: 10vh;
+    min-height: calc(50px + 10vw);;
 
     &__mailHolder, &__github{
 

@@ -5,6 +5,7 @@
 @use "partials/filter";
 @use "partials/projectsSection";
 @use "partials/projectPage";
+@use "partials/linkUp";
 @use "partials/footer";
 
 @use "partials/variables";
@@ -27,19 +28,6 @@ body {
     cursor: url("./Assets/cursor/default.png"), auto;
 }
 
-a{
-    cursor: url("./Assets/cursor/pointer.png"), auto;
-    font-size:calc(10px + 1vw);
-
-    &:hover {
-        color: greenyellow;
-    }
-}
-
-.project {
-    cursor: url("./Assets/cursor/pointer.png"), auto;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -53,21 +41,42 @@ section {
 }
 
 h1 {
-    font-size: calc(17px + 1vw);
+    font-size: calc(20px + 1vw);
+    font-family: variables.$titleFont;
+    letter-spacing: 0.2vw;
 }
 
 h2 {
     margin-bottom: 10px;
-    font-size: calc(14px + 1vw);
+    font-size: calc(18px + 1vw);
+    font-family: variables.$titleFont;
+    letter-spacing: 0.2vw;
 }
 
 h3 {
     margin-bottom: 10px;
-    font-size: calc(10px + 1vw);
+    font-size: calc(16px + 1vw);
+    font-family: variables.$titleFont;
+    letter-spacing: 0.2vw;
 }
 
 p {
-    font-size: calc(6px + 1vw);
+    font-size: calc(12px + 1vw);
+    font-family: variables.$textFont;
+}
+
+a{
+    cursor: url("./Assets/cursor/pointer.png"), auto;
+    font-size:calc(12px + 1vw);
+    font-family: variables.$textFont;
+
+    &:hover {
+        color: greenyellow;
+    }
+}
+
+.project {
+    cursor: url("./Assets/cursor/pointer.png"), auto;
 }
 
 .hidden {

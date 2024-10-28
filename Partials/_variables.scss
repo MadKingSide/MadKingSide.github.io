@@ -1,4 +1,16 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/Open_Sans/OpenSans-Regular.ttf) format("truetype");
+}
+
 $primaryColor: black;
 $secondaryColor : rgb(48, 48, 48);
 $textColor: white;
 $HoverColor: greenyellow;
+$titleFont: "Roboto";
+$textFont: "Open Sans";

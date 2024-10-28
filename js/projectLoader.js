@@ -68,7 +68,7 @@ const projectObj = {
 /* F O N C T I O N  P R O J E C T  L O A D E R */
 
 let htmlPage = window.location.href;
-window.alert(htmlPage);
+//window.alert(htmlPage);
 
 function loadProject(projectName) {
   localStorage.setItem("projectSelected", projectName);

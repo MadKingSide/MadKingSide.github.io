@@ -12,6 +12,7 @@
         border: solid 2px variables.$textColor;
         border-radius: 25px;
         overflow: hidden;
+        margin: 20px 0;
     }
 
     &__text {
@@ -22,6 +23,7 @@
         width: 100%;
         border: 2px solid variables.$textColor;
         border-radius: 25px;
+        margin: 20px 0;
     }
 
     &__image, &__mainImage {

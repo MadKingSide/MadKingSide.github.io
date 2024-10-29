@@ -52,13 +52,13 @@ const projectObj = {
   },
   MonsterHunter: {
     titre: `Vous êtes le héros : Monster Hunter - WEB, Sonore`,
-    description: `Un site dans le style Vous êtes le héros, mais version Monster Hunter. L'histoire contient plusieurs fins et quelques succès. Le site peux être intéragit avec sur cette page ou sur <a href="https://sideking.github.io/"> le site original</a> de ce projet. <a href="#AppNLingo">Ce projet à été réalisé avec Visual Studio Code, Github, Reaper et Davinci en utilisant l'HTML5, le CSS et le Javascript comme langages de programmation.</a>.`,
+    description: `Un site dans le style Vous êtes le héros, mais version Monster Hunter. L'histoire contient plusieurs fins et quelques succès. Le site peux être intéragit avec sur cette page ou sur <a href="https://sideking.github.io/"> le site original</a> de ce projet. <a href="#AppNLingo">Ce projet à été réalisé avec Visual Studio Code, Github, Reaper et Davinci en utilisant l'HTML5, le CSS et le Javascript comme langages de programmation</a>.`,
     mainImage: false,
     video: false,
     iframe: "https://sideking.github.io/",
     apps: ['github','vscode','Reaper','Davinci'],
     lingo: ['HTML5','css','javascript'],
-    isMine: "IMPORTANT : Je n'ai pas les droits sur les médias utilisés dans ce projet, les médias utilisés appartiennent au créateur du film original et de jeu Monster Hunter World ainsi que leurs équipes.",
+    isMine: "IMPORTANT : Je n'ai pas les droits sur les médias utilisés dans ce projet, les médias utilisés appartiennent au créateur du film original et du jeu Monster Hunter World ainsi que leurs équipes.",
   },
   odysseus: {
     titre: `odysseus - 3D, Sonore`,

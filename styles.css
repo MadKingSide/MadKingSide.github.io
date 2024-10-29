@@ -19,9 +19,10 @@
 }
 .nav__linkHolder {
   text-align: center;
-  margin: 20px 20px;
+  margin: 10px 20px;
 }
 .nav__link {
+  line-height: 150%;
   display: inline;
   white-space: nowrap;
   color: white;

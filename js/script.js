@@ -85,11 +85,12 @@ for (let index = 0; index < hoverarr.length; index++) {
     let randomSounds = Math.floor((Math.random() * 14) + 1);
     //console.log(randomSounds); which sound will play
     //console.log(window.location.href); what is the current url
-    if (window.location.href.includes(index.html)) {
+    if (window.location.href.includes(index.html) || htmlPage === "https://madkingside.github.io/") {
       keyboard.src = `./Assets/Keyboard_sounds_effect/${randomSounds}.wav`;
     } else {
       keyboard.src = `../Assets/Keyboard_sounds_effect/${randomSounds}.wav`;
     }
+    keyboard.volume = 0.5;
     keyboard.play();
   })
 }

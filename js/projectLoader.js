@@ -26,42 +26,47 @@ const projectObj = {
     iframe: false,
     apps: ['maya','unity'],
     lingo: false,
+    isMine: true,
   },
   pluieTunnel: {
     titre: `pluie Tunnel - 3D, Sonore`,
-    description: `Une scène 3D Créant une vieille tombe souterraine avec un aspect fantastique. Ce projet a été réalisé dans le cadre du cours "Modélisation 3D" par Jérémy roy-Côté, Jacob Jetté-Longpré et Gabriel Bourdage. Jacob à créé les cristaux, le pillier magique et le calice, Gabriel a créé les coffres les lanternes et le chandelier et j'ai créé le sarcophage l'épée et la porte. J'ai aussi assemblé la scène avec Jacob et fait l'éclairage. <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Mayam Reaper et Davinci</a>.`,
+    description: `Une animation 3D qui représente de la pluie horizontale dans un tunnel submergé d'eau. Ce projet a été réalisé dans le cadre du cours "Animation 3D" par Jérémy roy-Côté. Les sons Viennent de sources libre de droit et à été modifier dans Reaper avant d'être assemblé dans Davinci. <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Maya, Reaper et Davinci</a>.`,
     mainImage: false,
     video: "../Assets/3D/Pluie_tunnel/underwater_tunnel.mp4",
     iframe: false,
     apps: ['maya','REAPER','DaVinci'],
     lingo: false,
+    isMine: true,
   },
   pixar: {
     titre: `Intro style Pixar - 3D, Sonore`,
-    description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
+    description: `Une animation 3D copiant l'introduction des films Pixar avec une touche de créativité. Ce projet a été réalisé dans le cadre du cours "Animation 3D" par Jérémy roy-Côté. <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Maya, Reaper et Davinci</a>.`,
     mainImage: false,
     video:"../Assets/3D/Intro_Pixar/roy-cote_jeremy_TP3_pixar_mp4_582414_MO.mp4",
     iframe: false,
     apps: ['maya','REAPER','DaVinci'],
     lingo: false,
+    isMine: true,
   },
   MonsterHunter: {
     titre: `Vous êtes le héros : Monster Hunter - WEB, Sonore`,
-    description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
+    description: `Un site dans le style Vous êtes le héros, mais version Monster Hunter. L'histoire contient plusieurs fins et quelques succès. Le site peux être intéragit avec sur cette page ou sur <a href="https://sideking.github.io/"> le site original</a> de ce projet. <a href="#AppNLingo">Ce projet à été réalisé avec Visual Studio Code, Github, Reaper et Davinci en utilisant l'HTML5, le CSS et le Javascript comme langages de programmation.</a>.`,
     mainImage: false,
     video: false,
     iframe: "https://sideking.github.io/",
-    apps: ['github','vscode'],
+    apps: ['github','vscode','Reaper','Davinci'],
     lingo: ['HTML5','css','javascript'],
+    isMine: "IMPORTANT : Je n'ai pas les droits sur les médias utilisés dans ce projet, les médias utilisés appartiennent au créateur du film original et de jeu Monster Hunter World ainsi que leurs équipes.",
   },
   odysseus: {
     titre: `odysseus - 3D, Sonore`,
-    description: `Un environnement fantastique d'une plage déserte qui est sur une île volcanique qui s'apprête à entrer en éruption réalisé dans le cadre des cours "Animation 3D" et "Conception Sonore". Ceci est le gagnant du Prix "Coup de Coeur" du concours "Essais Audiovisuels" 2024. Ce projet dans le style low poly est entièrement fait par moi, Alexandre Gervais, incluant les pistes sonores. Le but de ce projet était d'essayer quelque chose de différent.`,
+    description: `Une animation 3D `,
     mainImage: false,
     video: "../Assets/3D/Odysseus/Odysseus.mp4",
     iframe: false,
     apps: ['maya','REAPER','DaVinci'],
     lingo: false,
+    isMine: true,
   },
 };
 
@@ -86,6 +91,7 @@ function loadProject(projectName) {
   let projectFrame = document.querySelector(".mainContent__frame");
   let projectVideo = document.querySelector(".mainContent__video");
   let projectsideContent = document.querySelector(".mainContent");
+  let doIOwn = document.querySelector(".isMine");
 
   /* For the apps section */
   let appsContainer = document.querySelector(".maestro__apps");
@@ -98,6 +104,13 @@ function loadProject(projectName) {
   /* Give project info */
   projectTitle.textContent = selectedProject.titre;
   projectDesc.innerHTML = selectedProject.description;
+
+  if (selectedProject.isMine !== true) { /* if if i dont own media */
+    doIOwn.textContent = selectedProject.isMine;
+    doIOwn.classList.remove("hidden");
+  } else {
+    doIOwn.classList.add("hidden");
+  }
 
   if (selectedProject.mainImage !== false) { /* if if main image */
     projectImg.src = selectedProject.mainImage;

@@ -2,7 +2,7 @@
 const projectObj = {
   tombeau: {
     titre: `Tombeau - 3D`,
-    description: `Une scène 3D Créant une vieille tombe souterraine avec un aspect fantastique. Ce projet a été réalisé dans le cadre du cours "Modélisation 3D" par Jérémy roy-Côté, Jacob Jetté-Longpré et Gabriel Bourdage. Jacob à créé les cristaux, le pillier magique et le calice, Gabriel a créé les coffres les lanternes et le chandelier et j'ai créé le sarcophage l'épée et la porte. J'ai aussi assemblé la scène avec Jacob et fait l'éclairage. <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Maya et Unity</a>.`,
+    description: `Une scène 3D Créant une vieille tombe souterraine avec un aspect fantastique. Ce projet a été réalisé dans le cadre du cours "Modélisation 3D" par Jérémy roy-Côté, Jacob Jetté-Longpré et Gabriel Bourdage. Jacob à créé les cristaux, le pillier magique et le calice, Gabriel a créé les coffres les lanternes et le chandelier et j'ai créé le sarcophage l'épée et la porte. J'ai aussi assemblé la scène avec Jacob et j'ai fait l'éclairage. <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Maya et Unity</a>.`,
     mainImage: "../Assets/3D/Tombeau/render_final_salle.jpg",
     image1: "../Assets/3D/Tombeau/moodboard_door.png",
     image2: "../Assets/3D/Tombeau/render_door_front.jpg",
@@ -71,6 +71,25 @@ const projectObj = {
     image1: "../Assets/3D/Odysseus/odysseus_davinci.jpg",
     apps: ['maya','REAPER','DaVinci'],
     lingo: false,
+    isMine: true,
+  },
+  Medieval: {
+    titre: `Medieval Fetch Quest - 3D, Programmation`,
+    description: `Un jeu Unity où tu dois ramasser des objets éparpillé dans l'environnement. Ce projet a été réalisé dans le cadre du cours "Réalité Virtuel" par Jérémy roy-Côté. <a href="#AppNLingo">Ce projet à été réalisé avec Unity et Visual Studio Community en utilisant le C# </a>.`,
+    mainImage: "../Assets/Jeu_Video/Ville_medieval/frontBridge.png",
+    video: false,
+    iframe: false,
+    subTitle1: "Capture d'écran en jeu",
+    subTitle4: "Capture d'écran du projet dans Autodesk Maya",
+    text1: "Les objets à rammasser sont 2 armes et 1 bouclier avec une animation.",
+    text2: "Une lampe que le joueur peux allumer et éteindre et une labyrinthe Souterrain.",
+    text3: "Un menu pause où le joueur peut changer la sensibilité de la caméra.",
+    image1: "../Assets/Jeu_Video/Ville_medieval/castle.png",
+    image2: "../Assets/Jeu_Video/Ville_medieval/labyrinth.png",
+    image3: "../Assets/Jeu_Video/Ville_medieval/pauseMenu.png",
+    image4: "../Assets/Jeu_Video/Ville_medieval/unity.png",
+    apps: ['unity','vsCommunity'],
+    lingo: ['c-sharp'],
     isMine: true,
   },
 };
@@ -197,7 +216,7 @@ function loadProject(projectName) {
 
 const allProjects = document.querySelectorAll(".project");
 console.log(allProjects);
-const projectArr = ["tombeau", "pluieTunnel", "pixar", "MonsterHunter","odysseus"];
+const projectArr = ["tombeau", "pluieTunnel", "pixar", "MonsterHunter","odysseus","Medieval"];
 
 allProjects.forEach((element) => {
   element.addEventListener("click", function () {
@@ -230,6 +249,9 @@ switch (projectClicked) {
     break;
   case "odysseus":
     projectSelected = projectObj.odysseus;
+    break;
+  case "Medieval":
+    projectSelected = projectObj.Medieval;
     break;
 }
 

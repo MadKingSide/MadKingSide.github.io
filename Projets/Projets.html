@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./Assets/favicon_signature.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../Assets/favicon_signature.png" type="image/x-icon">
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <title>Portfolio de Jérémy Roy-Côté</title>
 </head>
 <body>
     <nav class="nav" id="SurfaceLevel">
         <h1 class="myNameIs">Jérémy Roy-Côté</h1>
         <div class="nav__linkHolder">
-            <a href="./index.html"><h1 class="nav__link">Accueil</h1></a>
+            <a href="../index.html"><h1 class="nav__link">Accueil</h1></a>
             <a href="./Projets.html"><h1 class="nav__link">Projets</h1></a>
-            <a href="./Assets/CV.pdf" download="CV_jeremy_Roy-Cote"><h1 class="nav__link">Curriculum Vitae</h1></a>
+            <a href="../Assets/CV.pdf" download="CV_jeremy_Roy-Cote"><h1 class="nav__link">Curriculum Vitae</h1></a>
         </div>
     </nav>
     <main>
         <section class="sorting">
             <h2>Filtre</h2>
+            <!--<div class="sorting__holder">
+                <div class="sorting__genre filter toggled" id="all">Tous</div>
+                <div class="sorting__genre filter" id="3D">3D</div>
+                <div class="sorting__genre filter" id="web">Web</div>
+                <div class="sorting__genre filter" id="video">Video</div>
+                <div class="sorting__genre filter" id="videoGame">Jeu video</div>
+                <div class="sorting__genre filter" id="school">Projet d'école</div>
+                <div class="sorting__genre filter" id="school">Projet d'école</div>
+                <div class="sorting__genre filter" id="school">Projet d'école</div>
+            </div>-->
             <div class="swiper swiper-filters">
                 <div class="swiper-wrapper sorting__holder">
                     <div class="swiper-slide sorting__genre filter toggled" id="all">Tous</div>
@@ -37,7 +47,7 @@
 
                 <div class="projects__element school 3D project tombeau" id="tombeau">
                     
-                        <img src="./Assets/3D/Tombeau/render_final_salle.jpg" alt="" class="projects__element__preview">
+                        <img src="../Assets/3D/Tombeau/render_final_salle.jpg" alt="" class="projects__element__preview">
                         <h3 class="projects__element__title">Tombeau</h3>
                         <div class="projects__element__tagHolder">
                             <div class="sorting__genre">Projet d'école</div>
@@ -48,7 +58,7 @@
 
                 <div class="projects__element school 3D project pixar" id="pixar">
                     
-                        <img src="./Assets/3D/Intro_Pixar/intro_frame_1.png" alt="" class="projects__element__preview">
+                        <img src="../Assets/3D/Intro_Pixar/intro_frame_1.png" alt="" class="projects__element__preview">
                         <h3 class="projects__element__title">Intro style Pixar</h3>
                         <div class="projects__element__tagHolder">
                             <div class="sorting__genre">Projet d'école</div>
@@ -59,7 +69,7 @@
 
                 <div class="projects__element school web project MonsterHunter" id="MonsterHunter">
 
-                        <img src="./Assets/Web/vous_etes_le_heros/MH_preview.png" alt="" class="projects__element__preview">
+                        <img src="../Assets/Web/vous_etes_le_heros/MH_preview.png" alt="" class="projects__element__preview">
                         <h3 class="projects__element__title">Vous êtes le héro monster hunter</h3>
                         <div class="projects__element__tagHolder">
                             <div class="sorting__genre">Projet d'école</div>
@@ -70,7 +80,7 @@
 
                 <div class="projects__element school 3D project pluieTunnel" id="pluieTunnel">
 
-                        <img src="./Assets/3D/Pluie_tunnel/intro_frame_1.png" alt="" class="projects__element__preview">
+                        <img src="../Assets/3D/Pluie_tunnel/intro_frame_1.png" alt="" class="projects__element__preview">
                         <h3 class="projects__element__title">Pluie sous-marine</h3>
                         <div class="projects__element__tagHolder">
                             <div class="sorting__genre">Projet d'école</div>
@@ -81,7 +91,7 @@
 
                 <div class="projects__element school 3D project odysseus" id="odysseus">
 
-                        <img src="./Assets/3D/Odysseus/odysseus_frame.png" alt="" class="projects__element__preview">
+                        <img src="../Assets/3D/Odysseus/odysseus_frame.png" alt="" class="projects__element__preview">
                         <h3 class="projects__element__title">Oddyseus</h3>
                         <div class="projects__element__tagHolder">
                             <div class="sorting__genre">Projet d'école</div>
@@ -92,7 +102,7 @@
 
                 <div class="projects__element school 3D videoGame project Medieval" id="Medieval">
 
-                    <img src="./Assets/Jeu_Video/Ville_medieval/frontBridge.png" alt="" class="projects__element__preview">
+                    <img src="../Assets/Jeu_Video/Ville_medieval/frontBridge.png" alt="" class="projects__element__preview">
                     <h3 class="projects__element__title">Medieval Fetch Quest</h3>
                     <div class="projects__element__tagHolder">
                         <div class="sorting__genre">Projet d'école</div>
@@ -105,7 +115,7 @@
         </section>
             
         <!-- link to the surface -->
-        <a class="OceanFloor" href="#SurfaceLevel"><img src="./Assets/upWeGo.png" alt=""></a>
+        <a class="OceanFloor" href="#SurfaceLevel"><img src="../Assets/upWeGo.png" alt=""></a>
 
     </main>
     <footer class="foot">
@@ -121,6 +131,6 @@
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./js/script.js"></script>
-<script src="./js/projectLoader.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/projectLoader.js"></script>
 </html>

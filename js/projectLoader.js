@@ -56,7 +56,7 @@ const projectObj = {
     mainImage: false,
     video: false,
     iframe: "https://sideking.github.io/",
-    apps: ['github','vscode','Reaper','Davinci'],
+    apps: ['github','vscode','REAPER','DaVinci'],
     lingo: ['HTML5','css','javascript'],
     isMine: "IMPORTANT : Je n'ai pas les droits sur les médias utilisés dans ce projet, les médias utilisés appartiennent au créateur du film original et du jeu Monster Hunter World ainsi que leurs équipes.",
   },

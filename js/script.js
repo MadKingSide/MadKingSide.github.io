@@ -68,8 +68,10 @@ for (let i = 0; i < filterArr.length; i++) {
     }
     if (nbChecked == 0) {
       filterArr[0].classList.add("toggled");
-    }
-    
+      for (let h = 0; h < projetsArr.length; h++) {
+        projetsArr[h].classList.remove("unDisplay");
+      }
+    } 
   })
 }
 

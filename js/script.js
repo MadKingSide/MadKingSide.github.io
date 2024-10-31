@@ -75,6 +75,12 @@ for (let i = 0; i < filterArr.length; i++) {
   })
 }
 
+/* how to make the filter work ish
+- put the filters in an array(maybe an objet for sub objects)
+- when a button is clicked it removes the item from the array (or change a certain value)
+- loop through the array to see what will stay displayed
+*/
+
 
 // section keyboard sounds
 

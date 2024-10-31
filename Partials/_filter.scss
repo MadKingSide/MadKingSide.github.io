@@ -24,6 +24,10 @@
         order: 2;
         white-space: nowrap;
 
+        &-min {
+            display: none;
+        }
+
         &:hover {
             background-color: variables.$textColor;
             color: variables.$primaryColor;

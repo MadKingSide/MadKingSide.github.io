@@ -8,6 +8,7 @@
 }
 .nav {
   background-color: rgb(48, 48, 48);
+  max-height: -moz-fit-content;
   max-height: fit-content;
   width: 100%;
   min-width: 200px;
@@ -47,6 +48,7 @@
   text-align: center;
 }
 .news__swiper {
+  height: -moz-fit-content;
   height: fit-content;
 }
 .news__swiper__slide {
@@ -86,6 +88,7 @@
 }
 .about__container {
   background-color: rgb(48, 48, 48);
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 25px;
   display: flex;
@@ -116,8 +119,10 @@
   }
   .about__container img {
     height: 100px;
-    object-fit: cover;
-    object-position: top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
   }
   .about__text {
     align-self: center;
@@ -167,7 +172,9 @@
   justify-content: flex-start;
 }
 .sorting__genre {
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 5px;
   padding: 5px 10px;
@@ -175,9 +182,14 @@
   border-radius: 25px;
   text-align: center;
   transition: 0.2s;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   order: 2;
   white-space: nowrap;
+}
+.sorting__genre-min {
+  display: none;
 }
 .sorting__genre:hover {
   background-color: white;
@@ -200,6 +212,7 @@
 }
 .projects__element {
   position: relative;
+  height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
   border: 2px white solid;
@@ -225,26 +238,37 @@
   bottom: 0;
   left: 0;
   right: 0;
+  height: -moz-fit-content;
   height: fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .projects__element__tagHolder {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: visible;
 }
 
 .unDisplay {
   display: none !important;
 }
 
+@media screen and (max-width: 600px) {
+  .projects__element__tagHolder .sorting__genre {
+    display: none;
+  }
+  .projects__element__tagHolder .sorting__genre-min {
+    display: block;
+  }
+}
 .mainContent {
   width: 80%;
   display: flex;
@@ -350,14 +374,17 @@
 .img404 {
   width: 60%;
   max-height: 600px;
-  object-fit: cover;
-  object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   border: 2px solid white;
   border-radius: 25px;
   margin: 20px 0;
 }
 
 .text404 {
+  width: -moz-fit-content;
   width: fit-content;
   margin: 20px 0;
 }

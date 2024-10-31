@@ -53,8 +53,8 @@
             flex-direction: row;
             justify-content: center; //dunno if it looks good...
             align-items: center;
-            flex-wrap: wrap;
             background-color: rgba(0, 0, 0, 0.7);
+            overflow-x: visible;
         }
 
     }
@@ -62,4 +62,17 @@
 
 .unDisplay {
     display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+    .projects__element__tagHolder {
+
+        .sorting__genre {
+        display: none;
+        }
+
+        .sorting__genre-min {
+            display: block;
+        }
+    }
 }

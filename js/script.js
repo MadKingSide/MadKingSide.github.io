@@ -1,4 +1,4 @@
-const swiper = new Swiper('.news__swiper', {
+const swiperNews = new Swiper('.news__swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -18,13 +18,12 @@ const swiper = new Swiper('.news__swiper', {
     },
 });
 
-const mySwiperTwo = new Swiper (".swiper-filters", {
+const SwiperFilter = new Swiper (".swiper-filters", {
   slidesPerView: "auto",
   spaceBetween: 10,
   focusableElements: false,
   
 });
-
 
 // section filter
 
@@ -102,3 +101,5 @@ for (let index = 0; index < hoverarr.length; index++) {
     keyboard.play();
   })
 }
+
+/* section to make text shorter on mobile */

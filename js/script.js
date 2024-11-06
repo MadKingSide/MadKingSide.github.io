@@ -102,4 +102,12 @@ for (let index = 0; index < hoverarr.length; index++) {
   })
 }
 
-/* section to make text shorter on mobile */
+/* Nav color depending on the page */
+
+let locationURL = window.location.href;
+
+if (locationURL.includes("Projets.html") === true) {
+  document.getElementById("ProjectList").style.color = "greenyellow";
+} else if (locationURL.includes("index.html") === true || locationURL === "https://madkingside.github.io/") {
+  document.getElementById("MainMenu").style.color = "greenyellow";
+}

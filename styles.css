@@ -39,6 +39,8 @@
   margin-top: 20px;
   width: 100%;
   text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
 }
 
 .news {
@@ -83,6 +85,9 @@
   background-color: white;
 }
 
+@media screen {
+  /*remove the arrows*/
+}
 .about {
   width: 80%;
 }

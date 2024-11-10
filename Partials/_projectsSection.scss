@@ -14,7 +14,7 @@
         position: relative;
         height: fit-content;
         overflow: hidden;
-        border: 2px variables.$textColor solid;
+        border: 2px variables.$LinkColor solid;
         border-radius: 25px;
         margin: 10px 0;
         transition: 1s;
@@ -40,8 +40,9 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: fit-content;
-            width: fit-content;
+            height: 30px;
+            width: 100%;
+            background-image: linear-gradient(to right, rgba(white, 0) 1%, rgba(variables.$primaryColor, 0.5)  30%, rgba(white, 0) 99%);
         }
 
         &__tagHolder {

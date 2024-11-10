@@ -15,7 +15,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    color: white;
+    color: variables.$textColor;
 }
 
 html {
@@ -71,6 +71,7 @@ a{
     cursor: url("./Assets/cursor/pointer.png"), auto;
     font-size:calc(12px + 1vw);
     font-family: variables.$textFont;
+    color: variables.$LinkColor;
 
     &:hover {
         color: greenyellow;

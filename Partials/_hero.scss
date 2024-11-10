@@ -44,8 +44,11 @@
     }
 
     &__text {
-       // background-color: rgba(variables.$primaryColor, 0.5);
         background-image: linear-gradient(to right, rgba(white, 0), rgba(variables.$primaryColor, 0.5)  50%, rgba(white, 0));
+    }
+
+    &:hover &__text {
+        color: variables.$HoverColor;
     }
 }
 .swiper-pagination-bullet-active {
@@ -53,6 +56,8 @@
 }
 
 
-@media screen {
-    /*remove the arrows*/
+@media screen and (max-width: 600px) {
+    .news__swiper__arrow {
+        display: none;
+    }
 }

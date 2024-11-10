@@ -25,7 +25,7 @@
   line-height: 150%;
   display: inline;
   white-space: nowrap;
-  color: white;
+  color: #CA7DF9;
 }
 .nav__link:hover {
   color: greenyellow;
@@ -80,13 +80,18 @@
 .news__text {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0));
 }
+.news:hover .news__text {
+  color: #adff2f;
+}
 
 .swiper-pagination-bullet-active {
   background-color: white;
 }
 
-@media screen {
-  /*remove the arrows*/
+@media screen and (max-width: 600px) {
+  .news__swiper__arrow {
+    display: none;
+  }
 }
 .about {
   width: 80%;
@@ -220,7 +225,7 @@
   height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
-  border: 2px white solid;
+  border: 2px #CA7DF9 solid;
   border-radius: 25px;
   margin: 10px 0;
   transition: 1s;
@@ -229,7 +234,7 @@
   filter: blur(0px);
 }
 .projects__element:hover {
-  border: 2px greenyellow solid;
+  border: 2px #adff2f solid;
 }
 .projects__element__preview {
   width: 100%;
@@ -243,10 +248,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: 30px;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, rgba(0, 0, 0, 0.5) 30%, rgba(255, 255, 255, 0) 99%);
 }
 .projects__element__tagHolder {
   position: absolute;
@@ -335,7 +339,7 @@
   animation-iteration-count: infinite;
 }
 .OceanFloor:hover {
-  border: 2px greenyellow solid;
+  border: 2px #adff2f solid;
 }
 
 @keyframes rotatey {
@@ -352,22 +356,21 @@
 .foot {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   height: 5vw;
   min-height: calc(50px + 10vw);
 }
-.foot__mailHolder a, .foot__github a {
+.foot__mailHolder a, .foot__github a, .foot__linkedin a {
   text-decoration: none;
 }
-.foot__mailHolder hr, .foot__github hr {
+.foot__mailHolder hr, .foot__github hr, .foot__linkedin hr {
   border: 2px solid black;
   width: 0px;
   transition-duration: 1s;
   margin: auto;
 }
-.foot__mailHolder:hover hr, .foot__github:hover hr {
+.foot__mailHolder:hover hr, .foot__github:hover hr, .foot__linkedin:hover hr {
   border: 2px solid white;
   width: 100%;
 }
@@ -453,6 +456,7 @@ a {
   cursor: url("./Assets/cursor/pointer.png"), auto;
   font-size: calc(12px + 1vw);
   font-family: "Open Sans";
+  color: #CA7DF9;
 }
 a:hover {
   color: greenyellow;

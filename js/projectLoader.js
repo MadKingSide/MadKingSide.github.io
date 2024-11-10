@@ -215,7 +215,7 @@ function loadProject(projectName) {
 }
 
 const allProjects = document.querySelectorAll(".project");
-console.log(allProjects);
+//console.log(allProjects);
 const projectArr = ["tombeau", "pluieTunnel", "pixar", "MonsterHunter","odysseus","Medieval"];
 
 allProjects.forEach((element) => {
@@ -231,7 +231,7 @@ allProjects.forEach((element) => {
 
 let projectClicked = localStorage.getItem("projectClicked");
 let projectSelected = localStorage.getItem("projectSelected");
-console.log(htmlPage);
+//console.log(htmlPage);
 
 /* CHECKING EACH PROJECT TO TURN BACK THE LOCALSTORAGE INTO ITEM*/
 switch (projectClicked) {

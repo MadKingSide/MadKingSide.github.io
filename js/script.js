@@ -26,17 +26,31 @@ const SwiperFilter = new Swiper (".swiper-filters", {
 });
 
 // section filter
+let plusieursTags = false;
 
 let filterArr = document.querySelectorAll(".filter");
-console.log(filterArr)
+//console.log(filterArr)
 
 let projetsArr = document.querySelectorAll(".projects__element");
-console.log(projetsArr)
+//console.log(projetsArr)
+
+let checkedArr = [];
 
 for (let i = 0; i < filterArr.length; i++) {
   filterArr[i].addEventListener("click", function() {
-    console.log(`${filterArr[i].id}`); // to check which class is clicked
-    filterArr[i].classList.toggle("toggled");
+    //console.log(`${filterArr[i].id}`); // to check which class is clicked
+    filterArr[i].classList.toggle("toggled"); // toggles the tags in the filter
+
+    if (!checkedArr.includes(filterArr[i].id)) {
+      checkedArr.push(filterArr[i].id);
+    } else {
+      checkedArr.splice(checkedArr.indexOf(filterArr[i].id),1);
+    }
+    
+    projetsArr.forEach(element => {
+      element.classList.add("unDisplay");
+    });
+
     for (let j = 0; j < projetsArr.length; j++) {
 
       if (filterArr[i].id == "all") {
@@ -47,12 +61,22 @@ for (let i = 0; i < filterArr.length; i++) {
           element.classList.remove("unDisplay");
         });
         filterArr[0].classList.add("toggled");
-      } else if (!projetsArr[j].classList.contains(`${filterArr[i].id}`) ) {
-        projetsArr[j].classList.toggle("unDisplay");
-        filterArr[0].classList.remove("toggled");
+        checkedArr = [];
+      } else {
+        checkedArr.forEach(element => {
+          filterArr[0].classList.remove("toggled");
+          plusieursTags = checkedArr.filter(element => !projetsArr[j].classList.contains(element))
+          console.log(plusieursTags)
+          if (!plusieursTags.length > 0) {
+            projetsArr[j].classList.remove("unDisplay");
+          }
+        })
       }
     }
-    //loop to check if a filter is selected (for tous)
+    console.log(checkedArr)
+
+
+    //loop to check if a filter is selected (for tous so it get checked when nothing is selected)
     let nbChecked = 0;
     
     for (let h = 0; h < filterArr.length; h++) {
@@ -63,7 +87,7 @@ for (let i = 0; i < filterArr.length; i++) {
       } else if (!filterArr[h].classList.contains("toggled")) {
         //console.log("none");
       }
-      console.log(nbChecked) //number of filter checked
+      //console.log(nbChecked) //number of filter checked
     }
     if (nbChecked == 0) {
       filterArr[0].classList.add("toggled");
@@ -73,12 +97,6 @@ for (let i = 0; i < filterArr.length; i++) {
     } 
   })
 }
-
-/* how to make the filter work ish
-- put the filters in an array(maybe an objet for sub objects)
-- when a button is clicked it removes the item from the array (or change a certain value)
-- loop through the array to see what will stay displayed
-*/
 
 
 // section keyboard sounds

@@ -212,6 +212,10 @@
   color: black;
 }
 
+#all {
+  order: 1;
+}
+
 .projects {
   width: 80%;
   text-align: center;

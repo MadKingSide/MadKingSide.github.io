@@ -205,6 +205,9 @@
   background-color: white;
   color: black;
 }
+.sorting__arrow {
+  color: #CA7DF9;
+}
 
 .toggled {
   order: 1;

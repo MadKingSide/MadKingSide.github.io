@@ -31,9 +31,11 @@
         &:hover {
             background-color: variables.$textColor;
             color: variables.$primaryColor;
-        }
+        } 
+    }
 
-        
+    &__arrow {
+        color: variables.$LinkColor;
     }
 }
 

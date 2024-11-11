@@ -23,6 +23,11 @@ const SwiperFilter = new Swiper (".swiper-filters", {
   spaceBetween: 10,
   focusableElements: false,
   
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
 // section filter

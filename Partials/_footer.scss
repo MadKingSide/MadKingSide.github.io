@@ -8,7 +8,8 @@
     justify-content: space-around;
     align-items: center;
     height: 5vw;
-    min-height: calc(50px + 10vw);;
+    min-height: calc(50px + 10vw);
+    margin: 20px 0;
 
     &__mailHolder, &__github, &__linkedin {
 

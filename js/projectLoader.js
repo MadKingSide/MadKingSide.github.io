@@ -27,9 +27,14 @@ const projectObj = {
     apps: ['maya','unity'],
     lingo: false,
     isMine: true,
+    class: ['school', '3D', 'project', 'tombeau'],
+    previewTitre: `Tombeau`,
+    previewImg: "../Assets/3D/Tombeau/render_final_salle.jpg",
+    previewGenre: ["Projet d'école", "3D"],
+    previewGenreMin: ["École", "3D"],
   },
   pluieTunnel: {
-    titre: `pluie Tunnel - 3D, Sonore`,
+    titre: `Pluie sous-marine - 3D, Sonore`,
     description: `Une animation 3D qui représente de la pluie horizontale dans un tunnel submergé d'eau. Ce projet a été réalisé dans le cadre du cours "Animation 3D" par Jérémy roy-Côté. Les sons Viennent de sources libre de droit et à été modifier dans Reaper avant d'être assemblé dans Davinci. <a href="#AppNLingo">Ce projet à été réalisé avec AutoDesk Maya, Reaper et Davinci</a>.`,
     mainImage: false,
     video: "../Assets/3D/Pluie_tunnel/underwater_tunnel.mp4",
@@ -37,6 +42,11 @@ const projectObj = {
     apps: ['maya','REAPER','DaVinci'],
     lingo: false,
     isMine: true,
+    class: ['school', '3D', 'project', 'pluieTunnel'],
+    previewTitre: `Pluie sous-marine`,
+    previewImg: "../Assets/3D/Pluie_tunnel/intro_frame_1.png",
+    previewGenre: ["Projet d'école", "3D"],
+    previewGenreMin: ["École", "3D"],
   },
   pixar: {
     titre: `Intro style Pixar - 3D, Sonore`,
@@ -49,19 +59,29 @@ const projectObj = {
     apps: ['maya','REAPER','DaVinci'],
     lingo: false,
     isMine: true,
+    class: ['school', '3D', 'project', 'pixar'],
+    previewTitre: `Intro style Pixar`,
+    previewImg: "../Assets/3D/Intro_Pixar/intro_frame_1.png",
+    previewGenre: ["Projet d'école", "3D"],
+    previewGenreMin: ["École", "3D"],
   },
   MonsterHunter: {
     titre: `Vous êtes le héros : Monster Hunter - WEB, Sonore`,
-    description: `Un site dans le style Vous êtes le héros, mais version Monster Hunter. L'histoire contient plusieurs fins et quelques succès. Le site peux être intéragit avec sur cette page ou sur <a href="https://sideking.github.io/"> le site original</a> de ce projet. <a href="#AppNLingo">Ce projet à été réalisé avec Visual Studio Code, Github, Reaper et Davinci en utilisant l'HTML5, le CSS et le Javascript comme langages de programmation</a>.`,
+    description: `Un site dans le style Vous êtes le héros, mais version Monster Hunter. L'histoire contient plusieurs fins et quelques succès. Le site peux être intéragit avec sur cette page ou sur <a href="https://madkingside.github.io/sideking.github.io/"> le site original</a> de ce projet. <a href="#AppNLingo">Ce projet à été réalisé avec Visual Studio Code, Github, Reaper et Davinci en utilisant l'HTML5, le CSS et le Javascript comme langages de programmation</a>.`,
     mainImage: false,
     video: false,
-    iframe: "https://sideking.github.io/",
+    iframe: "https://madkingside.github.io/sideking.github.io/",
     apps: ['github','vscode','REAPER','DaVinci'],
     lingo: ['HTML5','css','javascript'],
     isMine: "IMPORTANT : Je n'ai pas les droits sur les médias utilisés dans ce projet, les médias utilisés appartiennent au créateur du film original et du jeu Monster Hunter World ainsi que leurs équipes.",
+    class: ['school', 'web', 'project', 'MonsterHunter'],
+    previewTitre: `Vous êtes le héros : Monster Hunter`,
+    previewImg: "../Assets/Web/vous_etes_le_heros/MH_preview.png",
+    previewGenre: ["Projet d'école", "Web"],
+    previewGenreMin: ["École", "Web"],
   },
   odysseus: {
-    titre: `odysseus - 3D, Sonore`,
+    titre: `Odysseus - 3D, Sonore`,
     description: `Une animation 3D dans laquelle un robot explore une planète inondé avec des vestiges étranges. Ce projet a été réalisé dans le cadre du cours "Animation 3D" et "Conception Sonore Interactive" par Jérémy roy-Côté, Keven Malric et Sitmonternna Yi. La vidéo ci-dessous contient seulement l'intro du résultat final. L'animation de feu a été créer par Keven, le montage video et l'éclairage 3D sont de moi. <a href="#AppNLingo">Ce projet à été réalisé avec Autodesk Maya, Reaper et Davinci</a>.`,
     mainImage: false,
     video: "../Assets/3D/Odysseus/Odysseus.mp4",
@@ -72,6 +92,11 @@ const projectObj = {
     apps: ['maya','REAPER','DaVinci'],
     lingo: false,
     isMine: true,
+    class: ['school', '3D', 'project', 'odysseus'],
+    previewTitre: `Odysseus`,
+    previewImg: "../Assets/3D/Odysseus/odysseus_frame.png",
+    previewGenre: ["Projet d'école", "3D"],
+    previewGenreMin: ["École", "3D"],
   },
   Medieval: {
     titre: `Medieval Fetch Quest - 3D, Programmation`,
@@ -91,6 +116,11 @@ const projectObj = {
     apps: ['unity','vsCommunity'],
     lingo: ['c-sharp'],
     isMine: true,
+    class: ['school', '3D', 'project', 'videoGame', 'Medieval'],
+    previewTitre: `Medieval Fetch Quest`,
+    previewImg: "../Assets/Jeu_Video/Ville_medieval/frontBridge.png",
+    previewGenre: ["Projet d'école", "3D", "Jeux Vidéo"],
+    previewGenreMin: ["École", "3D", "Jeux"],
   },
 };
 
@@ -98,6 +128,57 @@ const projectObj = {
 
 let htmlPage = window.location.href;
 //window.alert(htmlPage);
+
+/*--------MAKE NEW PROJECT IN PROJECT.HTML DEPENDING ON THE OBJECTS--------*/
+const projectCreator = Object.keys(projectObj); //keys are weird, if you dont remember how to use them, pls do
+
+if (htmlPage.includes("Projets.html") === true) {
+  for (let i = 0; i < projectCreator.length; i++) {
+    const projectContainer = document.querySelector(".projects__all");
+    //console.log(projectCreator[i]);
+    //console.log(projectObj[projectCreator[i]]);
+    let divProject = document.createElement("div");
+    divProject.classList.add("projects__element");
+    divProject.id = `${projectCreator[i]}`;
+
+
+    for (let j = 0; j < projectObj[projectCreator[i]].class.length; j++) {
+      divProject.classList.add(projectObj[projectCreator[i]].class[j])
+    }
+
+    let img = document.createElement("img");
+    img.src = projectObj[projectCreator[i]].previewImg;
+    img.classList.add("projects__element__preview")
+
+    let title = document.createElement("h3");
+    title.classList.add("projects__element__title");
+    title.innerHTML = projectObj[projectCreator[i]].previewTitre;
+
+    let divGenreHolder = document.createElement("div");
+    divGenreHolder.classList.add("projects__element__tagHolder");
+    
+    for (let k = 0; k < projectObj[projectCreator[i]].previewGenre.length; k++) {
+      let divGenre = document.createElement("div");
+      divGenre.classList.add("sorting__genre");
+      divGenre.innerHTML = `${projectObj[projectCreator[i]].previewGenre[k]}`
+
+      let divGenreMin = document.createElement("div");
+      divGenreMin.classList.add("sorting__genre");
+      divGenreMin.classList.add("sorting__genre-min");
+      divGenreMin.innerHTML = `${projectObj[projectCreator[i]].previewGenreMin[k]}`
+      
+      divGenreHolder.appendChild(divGenre);
+      divGenreHolder.appendChild(divGenreMin);
+    }
+    
+    divProject.appendChild(img);
+    divProject.appendChild(title);
+    divProject.appendChild(divGenreHolder);
+
+    projectContainer.appendChild(divProject);
+    /* div[ img h3 div[genre genre-min] ]  */
+  }
+}
 
 function loadProject(projectName) {
   localStorage.setItem("projectSelected", projectName);
@@ -258,3 +339,5 @@ switch (projectClicked) {
 if (htmlPage.includes("pagesTemplate.html")) {
   loadProject(projectSelected);
 }
+
+

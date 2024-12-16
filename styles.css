@@ -368,6 +368,7 @@
   align-items: center;
   height: 5vw;
   min-height: calc(50px + 10vw);
+  margin: 20px 0;
 }
 .foot__mailHolder a, .foot__github a, .foot__linkedin a {
   text-decoration: none;

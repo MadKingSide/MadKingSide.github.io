@@ -122,6 +122,22 @@ const projectObj = {
     previewGenre: ["Projet d'école", "3D", "Jeux Vidéo"],
     previewGenreMin: ["École", "3D", "Jeux"],
   },
+  reversGalactique: {
+    titre: `Revers Galactique - 3D, Programmation`,
+    description: `Un jeu Unity dans lequel tu dois vaincre des aliens avec une raquette et une balle de tennis. Ce projet a été réalisé dans le cadre du cours "Réalité Virtuel" par Jérémy roy-Côté, <a href="https://samesthumain.github.io/">Samuel Desmeules-Voyer</a>, <a href="https://marexillius.github.io/Alexandre-Gervais-Portfolio/">Alexandre Gervais</a> et Michaël Un Dupré. <a href="#AppNLingo">Ce projet à été réalisé avec Unity et Visual Studio Community en utilisant le C#. Tous les sons ont été modifier dans Reaper.</a>`,
+    mainImage: false,
+    video: "../Assets/Jeu_Video/revers_galactique/Revers_Galactique_Trailer_Officiel.mp4",
+    iframe: false,
+    text1: "Vidéo créé par Alexandre Gervais",
+    apps: ['unity','vsCommunity','REAPER'],
+    lingo: ['c-sharp'],
+    isMine: true,
+    class: ['school', '3D', 'project', 'videoGame', 'reversGalactique'],
+    previewTitre: `Revers Galactique`,
+    previewImg: "../Assets/Jeu_Video/revers_galactique/intro_frame_1.png",
+    previewGenre: ["Projet d'école", "3D", "Jeux Vidéo"],
+    previewGenreMin: ["École", "3D", "Jeux"],
+  },
 };
 
 /* F O N C T I O N  P R O J E C T  L O A D E R */
@@ -297,7 +313,7 @@ function loadProject(projectName) {
 
 const allProjects = document.querySelectorAll(".project");
 //console.log(allProjects);
-const projectArr = ["tombeau", "pluieTunnel", "pixar", "MonsterHunter","odysseus","Medieval"];
+const projectArr = ["tombeau", "pluieTunnel", "pixar", "MonsterHunter","odysseus","Medieval", "reversGalactique"];
 
 allProjects.forEach((element) => {
   element.addEventListener("click", function () {
@@ -333,6 +349,9 @@ switch (projectClicked) {
     break;
   case "Medieval":
     projectSelected = projectObj.Medieval;
+    break;
+  case "reversGalactique":
+    projectSelected = projectObj.reversGalactique;
     break;
 }
 

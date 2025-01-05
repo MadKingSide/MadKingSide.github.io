@@ -124,7 +124,7 @@ const projectObj = {
   },
   reversGalactique: {
     titre: `Revers Galactique - 3D, Programmation`,
-    description: `Un jeu Unity dans lequel tu dois vaincre des aliens avec une raquette et une balle de tennis. Ce projet a été réalisé dans le cadre du cours "Réalité Virtuel" par Jérémy roy-Côté, <a href="https://samesthumain.github.io/">Samuel Desmeules-Voyer</a>, <a href="https://marexillius.github.io/Alexandre-Gervais-Portfolio/">Alexandre Gervais</a> et Michaël Un Dupré. <a href="#AppNLingo">Ce projet à été réalisé avec Unity et Visual Studio Community en utilisant le C#. Tous les sons ont été modifier dans Reaper.</a>`,
+    description: `Un jeu Unity dans lequel tu dois vaincre des aliens avec une raquette et une balle de tennis. Ce projet a été réalisé dans le cadre du cours "Réalité Virtuel" par Jérémy roy-Côté, <a href="https://samesthumain.github.io/">Samuel Desmeules-Voyer</a>, <a href="https://alexandregervaiscode.github.io/Alexandre-Gervais-Portfolio/">Alexandre Gervais</a> et <a href="https://michaelu-d.github.io/portfolio/">Michaël Un Dupré</a>. <a href="#AppNLingo">Ce projet à été réalisé avec Unity et Visual Studio Community en utilisant le C#. Tous les sons ont été modifier dans Reaper.</a>`,
     mainImage: false,
     video: "../Assets/Jeu_Video/revers_galactique/Revers_Galactique_Trailer_Officiel.mp4",
     iframe: false,

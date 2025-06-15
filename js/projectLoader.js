@@ -29,7 +29,7 @@ const projectObj = {
     isMine: true,
     class: ['school', '3D', 'project', 'tombeau'],
     previewTitre: `Tombeau`,
-    previewImg: "../Assets/3D/Tombeau/render_final_salle.jpg",
+    previewImg: "./Assets/3D/Tombeau/render_final_salle.jpg",
     previewGenre: ["Projet d'école", "3D"],
     previewGenreMin: ["École", "3D"],
   },
@@ -44,7 +44,7 @@ const projectObj = {
     isMine: true,
     class: ['school', '3D', 'project', 'pluieTunnel'],
     previewTitre: `Pluie sous-marine`,
-    previewImg: "../Assets/3D/Pluie_tunnel/intro_frame_1.png",
+    previewImg: "./Assets/3D/Pluie_tunnel/intro_frame_1.png",
     previewGenre: ["Projet d'école", "3D"],
     previewGenreMin: ["École", "3D"],
   },
@@ -61,7 +61,7 @@ const projectObj = {
     isMine: true,
     class: ['school', '3D', 'project', 'pixar'],
     previewTitre: `Intro style Pixar`,
-    previewImg: "../Assets/3D/Intro_Pixar/intro_frame_1.png",
+    previewImg: "./Assets/3D/Intro_Pixar/intro_frame_1.png",
     previewGenre: ["Projet d'école", "3D"],
     previewGenreMin: ["École", "3D"],
   },
@@ -76,7 +76,7 @@ const projectObj = {
     isMine: "IMPORTANT : Je n'ai pas les droits sur les médias utilisés dans ce projet, les médias utilisés appartiennent au créateur du film original et du jeu Monster Hunter World ainsi que leurs équipes.",
     class: ['school', 'web', 'project', 'MonsterHunter'],
     previewTitre: `Vous êtes le héros : Monster Hunter`,
-    previewImg: "../Assets/Web/vous_etes_le_heros/MH_preview.png",
+    previewImg: "./Assets/Web/vous_etes_le_heros/MH_preview.png",
     previewGenre: ["Projet d'école", "Web"],
     previewGenreMin: ["École", "Web"],
   },
@@ -94,7 +94,7 @@ const projectObj = {
     isMine: true,
     class: ['school', '3D', 'project', 'odysseus'],
     previewTitre: `Odysseus`,
-    previewImg: "../Assets/3D/Odysseus/odysseus_frame.png",
+    previewImg: "./Assets/3D/Odysseus/odysseus_frame.png",
     previewGenre: ["Projet d'école", "3D"],
     previewGenreMin: ["École", "3D"],
   },
@@ -118,7 +118,7 @@ const projectObj = {
     isMine: true,
     class: ['school', '3D', 'project', 'videoGame', 'Medieval'],
     previewTitre: `Medieval Fetch Quest`,
-    previewImg: "../Assets/Jeu_Video/Ville_medieval/frontBridge.png",
+    previewImg: "./Assets/Jeu_Video/Ville_medieval/frontBridge.png",
     previewGenre: ["Projet d'école", "3D", "Jeux Vidéo"],
     previewGenreMin: ["École", "3D", "Jeux"],
   },
@@ -134,7 +134,7 @@ const projectObj = {
     isMine: true,
     class: ['school', '3D', 'project', 'videoGame', 'reversGalactique'],
     previewTitre: `Revers Galactique`,
-    previewImg: "../Assets/Jeu_Video/revers_galactique/intro_frame_1.png",
+    previewImg: "./Assets/Jeu_Video/revers_galactique/intro_frame_1.png",
     previewGenre: ["Projet d'école", "3D", "Jeux Vidéo"],
     previewGenreMin: ["École", "3D", "Jeux"],
   },
@@ -163,7 +163,7 @@ if (htmlPage.includes("Projets.html") === true) {
     }
 
     let img = document.createElement("img");
-    img.src = projectObj[projectCreator[i]].previewImg;
+    img.src = "." + projectObj[projectCreator[i]].previewImg;
     img.classList.add("projects__element__preview")
 
     let title = document.createElement("h3");
@@ -360,3 +360,28 @@ if (htmlPage.includes("pagesTemplate.html")) {
 }
 
 
+if (htmlPage.includes("index.html") === true || htmlPage === "https://madkingside.github.io/") {
+  //console.log(projectCreator);
+
+  let indexPreviewText = document.querySelectorAll(".news__text");
+  let indexPreviewImg = document.querySelectorAll(".news__img");
+  let indexPreviewClass = document.querySelectorAll(".project");
+
+  let heroIndex = 0;
+
+  for (let index = projectCreator.length - 1; index > projectCreator.length - 4/*-3 -1 */; index--) {
+
+    //console.log(projectObj[projectCreator[index]].previewTitre);
+    //console.log(projectObj[projectCreator[index]].previewImg);
+    //console.log(indexPreviewText, indexPreviewImg);
+
+    let projectMainClass = projectObj[projectCreator[index]].class[projectObj[projectCreator[index]].class.length - 1];
+
+    indexPreviewClass[heroIndex].classList.add(projectMainClass);
+    indexPreviewText[heroIndex].innerHTML = projectObj[projectCreator[index]].previewTitre;
+    indexPreviewImg[heroIndex].src = projectObj[projectCreator[index]].previewImg;
+
+    heroIndex++;
+  }
+
+}

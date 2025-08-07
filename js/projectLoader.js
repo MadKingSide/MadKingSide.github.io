@@ -138,6 +138,25 @@ const projectObj = {
     previewGenre: ["Projet d'école", "3D", "Jeux Vidéo"],
     previewGenreMin: ["École", "3D", "Jeux"],
   },
+  
+    C0NDU8: {
+    titre: `C0N DU8 - Programmation`,
+    description: `Un jeu Unity de course où tu contrôle une moto avec un vélo stationnaire. Ce projet a été réalisé en tant que projet final de technique. <a href="https://gearshift-games.github.io/Web-C0N-DU8/">Site web du projet</a>. <a href="#AppNLingo">Ce projet à été réalisé avec Unity, Visual Studio Community, Arduino et TouchDesigner en utilisant le C#, C++ et Python.</a>`,
+    mainImage: false,
+    video: false,
+    iframe: "https://gearshift-games.github.io/Web-C0N-DU8/",
+    text1: `Exposé du 17 au 21 Mars 2025 au Collège Montmorency, C0N DU8 est une expérience multimédia qui a pour but de permettre au joueurs de faire de l'exercice tout en jouant.`,
+    text2: `Le contrôle avec le vélo stationnaire se fait avec plusieurs objets OSC (un voltmètre et une kinect) qui servent a calculer la vitesse et la direction de la moto.`,
+    text3: `Mon rôle dans le projet concernait la communication entre les logiciels, la détection du joueur et de ses intéractions avec le vélo stationnaire. Une fois finit, j'ai aidé avec la programmation dans unity.`,
+    apps: ['unity','vsCommunity','Arduino','touchdesigner'],
+    lingo: ['c-sharp','c++','Python'],
+    isMine: true,
+    class: ['school', '3D', 'project', 'videoGame', 'C0NDU8'],
+    previewTitre: `C0N DU8`,
+    previewImg: "./Assets/Jeu_Video/C0NDU8/titre_c0ndu8.png",
+    previewGenre: ["Projet d'école", "3D", "Jeux Vidéo"],
+    previewGenreMin: ["École", "3D", "Jeux"],
+  },
 };
 
 /* F O N C T I O N  P R O J E C T  L O A D E R */
@@ -313,7 +332,7 @@ function loadProject(projectName) {
 
 const allProjects = document.querySelectorAll(".project");
 //console.log(allProjects);
-const projectArr = ["tombeau", "pluieTunnel", "pixar", "MonsterHunter","odysseus","Medieval", "reversGalactique"];
+const projectArr = ["tombeau", "pluieTunnel", "pixar", "MonsterHunter","odysseus","Medieval", "reversGalactique", "C0NDU8"];
 
 allProjects.forEach((element) => {
   element.addEventListener("click", function () {
@@ -352,6 +371,9 @@ switch (projectClicked) {
     break;
   case "reversGalactique":
     projectSelected = projectObj.reversGalactique;
+    break;
+  case "C0NDU8":
+    projectSelected = projectObj.C0NDU8;
     break;
 }
 

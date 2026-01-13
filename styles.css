@@ -179,7 +179,7 @@
 .sorting__holder {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .sorting__genre {
   width: -moz-fit-content;
